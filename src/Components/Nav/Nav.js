@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Navbar,Nav,NavItem} from 'react-bootstrap';
 import './Nav.css';
+import logo from '../../mainLogo.png';
 
 export default class Navigation extends Component{
     render(){
@@ -8,19 +9,19 @@ export default class Navigation extends Component{
             <Navbar fluid inverse fixedTop collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                    ITC2019
+                    <img src={logo}/>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav pullRight>
-                    <NavItem href="#">About Congress</NavItem>
-                    <NavItem href="#">Highlights</NavItem>
-                    <NavItem href="#">Itinerary</NavItem>
-                    <NavItem href="#">Speakers</NavItem>
-                    <NavItem href="#">Sponsors</NavItem>
-                    <NavItem href="#">About Us</NavItem>
-                    <NavItem href="#">Contact Us</NavItem>
+                    <NavItem href="#">ABOUT CONGRESS</NavItem>
+                    <NavItem href="#">HIGHLIGHTS</NavItem>
+                    <NavItem href="#">ITINERARY</NavItem>
+                    <NavItem href="#">SPEAKERS</NavItem>
+                    <NavItem href="#">SPONSORS</NavItem>
+                    <NavItem href="#">ABOUT US</NavItem>
+                    <NavItem href="#">CONTACT US</NavItem>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

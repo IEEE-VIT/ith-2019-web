@@ -1,0 +1,14 @@
+.bg {
+    position: relative;
+    background-image:url('../../cover.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: auto; 
+    background-size: cover;
+    z-index: -1; 
+}
+
+.bg-container {
+    background-color: rgba(0, 0, 0, 0.4);
+}

@@ -1,8 +1,18 @@
+.navbar{
+    transition: 0.1s;
+    transition-timing-function: ease-out;
+}
 .navbar-inverse {
     background-color: rgba(0, 0, 0,0);
     border: none;
+}
 
-
+.navbar-default{
+    font-size: 0.75em;
+    font-weight: 600;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0em 0.1em 0.3em 0.1em gray;
 }
 
 .navbar-inverse .navbar-nav>li>a {

@@ -1,0 +1,60 @@
+.header-container{
+    background-image: url('../../cover.jpg');
+    height: 100vh;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 0;
+}
+
+.overlay{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 0;
+
+}
+
+.content{
+    height: 100vh;
+    z-index: -1;
+}
+
+.btn{
+    z-index: 0;
+}
+.header-content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* align horizontal */
+    align-items: center;
+    color: white;
+    text-align: center;
+    z-index: 0;
+}
+
+.reg-link{
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 8px;
+}
+
+.reg-link:hover{
+    color: #333;
+    text-decoration: none;
+}
+
+.reg-btn{
+    border: 1.1px solid #fff;
+    padding: 6px 24px;
+    border-radius: 20px;
+}
+
+.reg-btn:hover{
+    background-color: #fff;
+}

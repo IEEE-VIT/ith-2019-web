@@ -1,41 +1,32 @@
-.header-container{
-    background-image: url('../../cover.jpg');
+.header{
     height: 100vh;
-    width: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
     position: relative;
-    z-index: 0;
+    background-image: url('../../cover.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
 }
 
 .overlay{
     height: 100vh;
     width: 100%;
-    background-color: rgba(0,0,0,0.4);
-    z-index: 0;
-
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(40deg, rgba(46,49,146,0.9),rgba(27,255,255,0.8))
 }
 
 .content{
-    height: 100vh;
-    z-index: -1;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0.2em 0.5em #333;
 }
 
-.btn{
-    z-index: 0;
-}
-.header-content{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* align horizontal */
-    align-items: center;
-    color: white;
-    text-align: center;
-    z-index: 0;
+h1{
+    font-size: 4.2rem;
 }
 
 .reg-link{
@@ -53,6 +44,7 @@
     border: 1.1px solid #fff;
     padding: 6px 24px;
     border-radius: 20px;
+    margin: 0px 14rem;
 }
 
 .reg-btn:hover{

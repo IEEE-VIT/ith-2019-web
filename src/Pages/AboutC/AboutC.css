@@ -1,4 +1,37 @@
-.aboutc{
-    height: 100vh;
+#aboutc{
+    margin: 48px;
+    margin-top: 72px;
+}
 
+#congress-desc>h4, #hackiv-desc>h4{
+    font-weight: 800;
+    padding-bottom: 8px;
+    display: inline;
+    border-bottom: 2px solid #2196f3; 
+}
+
+#congress-desc{
+    text-align: left;
+}
+
+#hackiv-desc{
+    text-align: right;
+}
+
+#congress-desc>p,#hackiv-desc>p{
+    text-align: justify;
+}
+
+#congress-desc>p,#hackiv-desc>p{
+    margin-top: 48px; 
+}
+
+
+#aboutc-img{
+    width: 350px;
+    height: auto;
+}
+
+#r1{
+    margin-bottom: 82px;
 }

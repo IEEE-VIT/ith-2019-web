@@ -8,17 +8,17 @@ export default class Header extends Component{
     componentDidMount(){
         window.addEventListener('scroll', () => {
             var wScroll = document.documentElement.scrollTop;
-            var content = document.getElementsByClassName('content');
+            var content = document.getElementsByClassName('show-grid');
             content[0].style.transform = 'translate(0px,'+wScroll/2+'px)';
         }, { passive: true })
     }
 
     render(){
         return(
-            <div className='header'>
+            <div id='header'>
                 <div className='overlay'>
                     <Grid>
-                        <Row className='show-grid'>
+                        <Row className='show-grid header-row'>
                             <Col className='title' md={6}>
                                 <div className='content'>
                                     <h1>Techloop</h1>

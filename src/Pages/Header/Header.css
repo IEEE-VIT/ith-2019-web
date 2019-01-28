@@ -1,4 +1,4 @@
-.header{
+#header{
     height: 100vh;
     position: relative;
     background-image: url('../../cover.jpg');
@@ -26,19 +26,19 @@
     color: white;
 }
 
-.row{
+.header-row{
     justify-content: center;
     display: flex;
     align-items: center;
 }
 
-h1{
+.content>h1{
     font-size: 4rem;
     font-weight: 100;
     margin: 0;
 }
 
-h5{
+.content>h5{
     font-weight: 700;
 }
 
@@ -56,7 +56,21 @@ h5{
 
 .btn{
     background-color: #fff;
-    padding:6px 20px;
+    padding:6px 32px;
+    border: #fff solid;
+    border-radius: 0;
+}
+
+.btn:hover{
+    background-color: rgba(0,0,0,0);
+}
+
+.btn:hover>a{
+    color: #fff;
+}
+
+.btn>a:hover{
+    color: #fff !important;
 }
 
 .btn>a{

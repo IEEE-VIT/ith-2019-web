@@ -14,8 +14,7 @@ export default class Navigation extends Component{
     componentDidMount(){
         window.addEventListener('scroll', () => {
             var wScroll = document.documentElement.scrollTop;
-            console.log(wScroll)
-            if (wScroll > 377) {
+            if (wScroll > 149) {
                 this.setState({transparent: false})
             }
             else{

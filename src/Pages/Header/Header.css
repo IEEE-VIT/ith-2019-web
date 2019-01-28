@@ -12,41 +12,62 @@
 .overlay{
     height: 100vh;
     width: 100%;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(40deg, rgba(46,49,146,0.9),rgba(27,255,255,0.8))
+    background-color: #2196f3;
+    background-image: radial-gradient(circle,rgba(255,255,255,0.36),#2196f3);
+
 }
 
 .content{
-    text-align: center;
+    text-align: left;
     color: white;
-    text-shadow: 0 0.2em 0.5em #333;
+}
+
+.row{
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 h1{
-    font-size: 4.2rem;
+    font-size: 4rem;
+    font-weight: 100;
+    margin: 0;
 }
 
-.reg-link{
-    color: #fff;
-    font-size: 1.1rem;
-    margin: 8px;
+h5{
+    font-weight: 700;
 }
 
-.reg-link:hover{
-    color: #333;
-    text-decoration: none;
+#sec-heading{
+    margin: 0;
+    font-weight: 800;
 }
 
-.reg-btn{
-    border: 1.1px solid #fff;
-    padding: 6px 24px;
-    border-radius: 20px;
-    margin: 0px 14rem;
+
+.graphics{
+    width: 57rem;
+    margin-bottom: -9rem;
+    margin-left: -12rem;
 }
 
-.reg-btn:hover{
+.btn{
     background-color: #fff;
+    padding:6px 20px;
+}
+
+.btn>a{
+    color: #2196f3;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+.btn>a:hover{
+    color: #2196f3;
+    text-decoration: none;
 }

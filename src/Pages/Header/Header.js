@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Header.css'
+import {Grid,Row,Col} from 'react-bootstrap';
+import img from '../../graphics/238.png'
 
 export default class Header extends Component{
 
@@ -15,12 +17,22 @@ export default class Header extends Component{
         return(
             <div className='header'>
                 <div className='overlay'>
-                    <div className='content'>
-                        <h1>Techloop Congress</h1>
-                        <h5>VIT, Vellore</h5>
-                        <h5>1st & 2nd August</h5>
-                        <a href='#' className='reg-link'><div className='reg-btn'>REGISTER</div></a>
-                    </div>
+                    <Grid>
+                        <Row className='show-grid'>
+                            <Col className='title' md={6}>
+                                <div className='content'>
+                                    <h1>Techloop</h1>
+                                    <h1 id='sec-heading'>Congress</h1>
+                                    <h5>VIT, Vellore</h5>
+                                    <h5>1<sup>st</sup> & 2<sup>nd</sup> August</h5>
+                                    <div className='btn'><a>REGISTER</a></div>
+                                </div>
+                            </Col>
+                            <Col md={6} xsHidden smHidden>
+                                <img src={img} className='graphics'></img>
+                            </Col>
+                        </Row>
+                    </Grid>
                 </div>
             </div>
         );

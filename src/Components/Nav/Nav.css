@@ -33,7 +33,7 @@
     border: none;
 }
 
-li:hover{
+.navbar-inverse .navbar-nav>li:hover{
     border-bottom: #fff solid;
 }
 

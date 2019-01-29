@@ -1,9 +1,9 @@
 #aboutc{
-    margin: 48px;
-    margin-top: 72px;
+    padding: 48px;
+    padding-top: 72px;
 }
 
-#congress-desc>h4, #hackiv-desc>h4{
+h4{
     font-weight: 800;
     padding-bottom: 8px;
     display: inline;
@@ -11,11 +11,11 @@
 }
 
 #congress-desc{
-    text-align: left;
+    text-align: right;
 }
 
 #hackiv-desc{
-    text-align: right;
+    text-align: left;
 }
 
 #congress-desc>p,#hackiv-desc>p{
@@ -35,3 +35,22 @@
 #r1{
     margin-bottom: 82px;
 }
+
+
+#techloop>img{
+    width: 300px;
+    margin-top: 86px;
+}
+
+#techloop>p{ 
+    text-align: justify;
+    margin-top: 64px;
+}
+
+@media only screen and (min-width: 768px) {
+    /* Desktop */
+    #techloop>p{ 
+        padding: 0 100px;
+    }
+}
+

@@ -1,7 +1,6 @@
 #header{
     height: 100vh;
     position: relative;
-    background-image: url('../../cover.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,6 +58,7 @@
     padding:6px 32px;
     border: #fff solid;
     border-radius: 0;
+    transition: 0.35s;
 }
 
 .btn:hover{

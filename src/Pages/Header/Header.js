@@ -20,7 +20,7 @@ export default class Header extends Component{
                 <div className='overlay'>
                     <Grid>
                         <Row className='show-grid header-row'>
-                            <Col className='title' md={6}>
+                            <Col className='title' lg={6} md={6}>
                                 <div className='content'>
                                     <h1>Techloop</h1>
                                     <h1 id='sec-heading'>Congress</h1>
@@ -29,7 +29,7 @@ export default class Header extends Component{
                                     <div className='btn'><a>REGISTER</a></div>
                                 </div>
                             </Col>
-                            <Col md={6} xsHidden smHidden>
+                            <Col md={6} lg={6} xsHidden smHidden>
                                 <img src={img} className='graphics'></img>
                             </Col>
                         </Row>

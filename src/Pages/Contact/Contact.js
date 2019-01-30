@@ -17,10 +17,10 @@ export default class Contact extends Component{
             <div id='contact'>
             <Grid>
                 <Row>
-                    <Col clas md={6} xsHidden smHidden>
+                    <Col clas md={6} lg={6} xsHidden smHidden>
                         <div id='hand-holder'><img id='hand' src={hand}/></div>
                     </Col>
-                    <Col id='contact-info' md={6}>
+                    <Col id='contact-info' md={6} lg={6}>
                         <h3>Reach out to us</h3>
                     </Col>
                 </Row>

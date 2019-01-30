@@ -24,14 +24,14 @@ export default class AboutC extends Component{
                 </Row>
 
                 <Row id='r2' className='show-grid'>
-                    <Col id='hackiv-desc' md={6}>
+                    <Col id='hackiv-desc' md={6} lg={6}>
                         <h4>HackIV</h4>
                         <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec gravida dui. Maecenas et nulla et eros cursus ornare sit amet non felis. Curabitur ac suscipit ex. Nulla eros massa, euismod et risus a, tincidunt aliquet est. Pellentesque sit amet ornare mauris. Mauris nec massa laoreet, hendrerit sapien sit amet, tempus sem. Aenean vitae porta neque, consectetur luctus justo.
                         Integer tincidunt nisi sit amet erat molestie maximus. Sed nunc diam, aliquam id turpis non, dignissim fringilla eros. 
                         </p>
                     </Col>
-                    <Col md={6} xsHidden smHidden>
+                    <Col md={6} xsHidden smHidden lg={6}>
                         <img id='aboutc-img' src={img2}></img>
                     </Col>
                 </Row>

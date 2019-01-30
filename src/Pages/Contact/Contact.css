@@ -1,0 +1,16 @@
+#contact{
+    background-color: #fff;
+    background-attachment: fixed;
+    padding: 48px;
+    padding-bottom: 0;
+    overflow: hidden;
+}
+
+#hand{
+    width: 140px;
+    z-index: -10;
+}
+
+#contact-info h2{
+    font-weight: 500;
+}

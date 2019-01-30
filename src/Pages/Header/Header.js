@@ -9,6 +9,7 @@ export default class Header extends Component{
         window.addEventListener('scroll', () => {
             var wScroll = document.documentElement.scrollTop;
             var content = document.getElementsByClassName('show-grid');
+            console.log(content[0]);
             content[0].style.transform = 'translate(0px,'+wScroll/2+'px)';
         }, { passive: true })
     }

@@ -36,12 +36,6 @@ export default class AboutC extends Component{
                     </Col>
                 </Row>
             </Grid>
-            <div id='techloop'>
-                <img src={tl}></img>
-                <p>
-                Techloop is an IEEE initiative which began with a simple objective: Students Teaching Students. Techloop provides an environment for students to learn from other students by the means of hands-on projects and interactive sessions. As the tagline, ‘stay in the loop’ suggests, Techloop truly keeps the students informed about all the happenings and developments in the technological industry. ITC presents three parallel techloop tracks: Machine Learning, Internet Of Things and Android Application Development.
-                </p>
-            </div>
             </div>
         );
     }

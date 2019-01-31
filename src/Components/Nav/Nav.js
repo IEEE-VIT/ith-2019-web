@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Navbar,NavItem,Nav} from 'react-bootstrap';
 import './Nav.css';
-import logo from '../../mainLogo.png';
+import logo from '../../graphics/itclogo.svg';
 
 export default class Navigation extends Component{
     constructor(){

@@ -15,8 +15,8 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
-    background-color: #2196f3;
-    background-image: radial-gradient(circle,rgba(255,255,255,0.36),#2196f3);
+    background-color: #1a1718;
+    background-image: radial-gradient(circle,rgba(255,255,255,0.36),#1a1718);
 
 }
 
@@ -32,7 +32,7 @@
 }
 
 .content>h1{
-    font-size: 4rem;
+    font-size: 8vh;
     font-weight: 100;
     margin: 0;
 }
@@ -41,22 +41,40 @@
     font-weight: 700;
 }
 
+.content>h3{
+    font-size: 3.4vh;
+    margin-top: 8px;
+}
 #sec-heading{
     margin: 0;
     font-weight: 800;
 }
 
+#sec-heading>strong{
+color: #ea1d78;
+font-weight: 900;
+}
+
+
+#dates>h5{
+    font-size: 2.4vh;
+}
+
+#dates{
+    margin: 3vh 0;
+}
+
 
 .graphics{
-    width: 57rem;
-    margin-bottom: -9rem;
-    margin-left: -12rem;
+    width: 102vh;
+    margin-bottom: -12vh;
+    margin-left: -18vh;
 }
 
 .btn{
-    background-color: #fff;
-    padding:6px 32px;
-    border: #fff solid;
+    background-color: #ea1d78;
+    padding: 1.2vh 6vh;
+    border: #ea1d78 solid;
     border-radius: 0;
     transition: 0.35s;
 }
@@ -74,9 +92,9 @@
 }
 
 .btn>a{
-    color: #2196f3;
-    font-size: 1.2rem;
-    font-weight: 700;
+    color: #fff;
+    font-size: 1.8vh;
+    font-weight: 800;
     padding: 0;
     margin: 0;
 }

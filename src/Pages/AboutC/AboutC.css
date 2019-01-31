@@ -7,7 +7,7 @@ h4{
     font-weight: 800;
     padding-bottom: 8px;
     display: inline;
-    border-bottom: 2px solid #2196f3; 
+    border-bottom: 2px solid #ea1d78; 
 }
 
 #congress-desc{
@@ -28,7 +28,7 @@ h4{
 
 
 #aboutc-img{
-    width: 350px;
+    width: 60vh;
     height: auto;
 }
 
@@ -37,20 +37,4 @@ h4{
 }
 
 
-#techloop>img{
-    width: 300px;
-    margin-top: 86px;
-}
-
-#techloop>p{ 
-    text-align: justify;
-    margin-top: 64px;
-}
-
-@media only screen and (min-width: 768px) {
-    /* Desktop */
-    #techloop>p{ 
-        padding: 0 100px;
-    }
-}
 

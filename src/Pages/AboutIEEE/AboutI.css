@@ -1,6 +1,6 @@
 #abouti{
-    background-color: #42A5F5;
-    background-image: radial-gradient(circle,rgba(255,255,255,0.36),#42A5F5
+    background-color: #1a1718;
+    background-image: radial-gradient(circle,rgba(255,255,255,0.36),#1a1718
     );
     padding: 48px;
 }
@@ -8,7 +8,7 @@
 #abouti>h2{
     color: #fff;
     font-weight: 800;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #ea1d78;
     padding-bottom: 8px;
     display: inline; 
 }
@@ -20,17 +20,12 @@
 
 #abouti-row>.col-md-6>p{
     color: #fff;
-    font-size: 12px;
-    padding: 32px;
-    font-weight: 400;
+    font-size: 2vh;
+    padding: 8vh;
+    font-weight: 600;
     text-align: justify;
 }
 
-#abouti-row>.col-md-6>a{
-    color: #fff;
-    font-size: 10px;
-    font-weight: 600;
-}
 
 #abouti>.container{
     margin-top: 72px;

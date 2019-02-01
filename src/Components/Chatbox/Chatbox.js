@@ -20,7 +20,13 @@ export default class Chatbox extends Component{
             //     Intent: 'Intent: '+data.Action,
             //     Message: data.Message
             // })
-            addResponseMessage(data.Message)
+            if (data.score > 65){
+
+                addResponseMessage(data.Message)
+            }
+            else{
+                addResponseMessage('Hmm, I don\t quite understand.')
+            }
         })
     }
     componentDidMount(){
@@ -29,7 +35,8 @@ export default class Chatbox extends Component{
     render(){
         return(
             <Widget
-            handleNewUserMessage={this.messageHandler}
+                handleNewUserMessage={this.messageHandler}
+                senderPlaceHolder='Typing a message..'
                 title="Lexie"
                 subtitle="I can asnwer your questions"
             />

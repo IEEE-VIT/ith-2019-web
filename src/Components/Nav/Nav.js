@@ -44,13 +44,13 @@ export default class Navigation extends Component{
                 <Navbar.Collapse>
                     <Nav pullRight>
                         <NavItem href='#aboutc'>ABOUT</NavItem>
-                        <NavItem>HIGHLIGHTS</NavItem>
+                        <NavItem href='#highlights'>HIGHLIGHTS</NavItem>
                         <NavItem>ITINERARY</NavItem>
                         <NavItem>BROCHURE</NavItem>
                         <NavItem>SPEAKERS</NavItem>
                         <NavItem>SPONSORS</NavItem>
-                        <NavItem>IEEE-VIT</NavItem>
-                        <NavItem>CONTACT US</NavItem>
+                        <NavItem href='#abouti-row'>IEEE-VIT</NavItem>
+                        <NavItem href='#contact'>CONTACT US</NavItem>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

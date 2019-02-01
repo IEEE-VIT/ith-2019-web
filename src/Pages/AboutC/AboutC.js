@@ -3,6 +3,7 @@ import './AboutC.css';
 import {Grid,Row,Col} from 'react-bootstrap';
 import img1 from '../../graphics/2.png';
 import img2 from '../../graphics/3.png';
+import tl from '../../graphics/techloop.png';
 
 export default class AboutC extends Component{
     render(){
@@ -19,8 +20,7 @@ export default class AboutC extends Component{
                             The <strong>IEEE Techloop Congress</strong> is a place for people to come together, collaborate and network. With informative and engaging technical sessions on some of the most promising areas of technology like Artificial Intelligence , Blockchain Technology and Robotics, this is a place where future innovators and enthusiasts can grow, learn, and discuss their ideas. 
                             With some of the most knowledgeable and reputed speakers from all around the country present, ITC is bound to be the best place for delegates to gain experience from some of the best in their field.
                             This year's theme is <strong>Machine Learning</strong> and <strong>Internet of Things.</strong>
-                        </p>
-                    
+                        </p>     
                     </Col>
                 </Row>
 
@@ -38,6 +38,21 @@ export default class AboutC extends Component{
                     </Col>
                     <Col md={6} xsHidden smHidden lg={6}>
                         <img id='aboutc-img' alt='hackiv' src={img2}></img>
+                    </Col>
+                </Row>
+
+                <Row id='r3' className='show-grid'>
+                    <Col md={6} xsHidden smHidden>
+                        <img id='tl-img' alt='techloop' src={tl}></img>
+                    </Col>
+                    <Col id='congress-desc' md={6}>
+                        <h4>Techloop</h4>
+                        <p>
+                        6 years ago, IEEE VIT developed a concept which eventually became the core belief of Techloop - Students Teaching Students. Teaching by means of providing an environment that promotes interaction and hands-on experience. 
+                        ITC 2019 presents 3 parallel Techloop tracks:
+                        Electronics(E+), Android App Development (A+) and Machine Learning (ML). These sessions will be conducted by the members of the IEEE VIT student branch and will provide a concrete base to empower self learning for further development. 
+
+                        </p>     
                     </Col>
                 </Row>
             </Grid>

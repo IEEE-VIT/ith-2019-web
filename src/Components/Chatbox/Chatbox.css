@@ -1,0 +1,23 @@
+.rcw-opened{
+    z-index: 1050;
+}
+
+.rcw-title{
+    border:none;  
+}
+
+.rcw-conversation-container .rcw-header{
+    background-color: #1a1718;
+}
+
+.rcw-conversation-container .rcw-close-button{
+    background-color: #1a1718;
+}
+
+.rcw-conversation-container,.rcw-launcher{
+    box-shadow: 0 2px 10px 1px #333;
+}
+
+.rcw-launcher{
+    background-color: #ea1d78;
+}

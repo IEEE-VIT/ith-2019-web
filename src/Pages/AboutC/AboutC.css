@@ -11,6 +11,16 @@ h4{
     border-bottom: 2px solid #ea1d78; 
 }
 
+#r3{
+    margin-top: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+#tl-img{
+    width: 90%;
+}
+
 #congress-desc{
     text-align: right;
 }
@@ -37,6 +47,9 @@ h4{
 
 #r1{
     margin-bottom: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
 

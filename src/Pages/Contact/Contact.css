@@ -7,7 +7,7 @@
 }
 
 #hand{
-    width: 35vh;
+    width: 40vh;
     z-index: -10;
 }
 
@@ -81,4 +81,9 @@
 #icon-holder{
     color: black;
 
+}
+
+#hand-holder{
+    position: relative;
+    bottom: 0;
 }

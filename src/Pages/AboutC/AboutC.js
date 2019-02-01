@@ -3,7 +3,6 @@ import './AboutC.css';
 import {Grid,Row,Col} from 'react-bootstrap';
 import img1 from '../../graphics/2.png';
 import img2 from '../../graphics/3.png';
-import tl from '../../graphics/techloop.png'
 
 export default class AboutC extends Component{
     render(){
@@ -12,7 +11,7 @@ export default class AboutC extends Component{
             <Grid fluid>
                 <Row id='r1' className='show-grid'>
                     <Col md={6} xsHidden smHidden>
-                        <img id='aboutc-img' src={img1}></img>
+                        <img id='aboutc-img' alt='congress' src={img1}></img>
                     </Col>
                     <Col id='congress-desc' md={6}>
                         <h4>Congress</h4>
@@ -38,7 +37,7 @@ export default class AboutC extends Component{
                         </p>
                     </Col>
                     <Col md={6} xsHidden smHidden lg={6}>
-                        <img id='aboutc-img' src={img2}></img>
+                        <img id='aboutc-img' alt='hackiv' src={img2}></img>
                     </Col>
                 </Row>
             </Grid>

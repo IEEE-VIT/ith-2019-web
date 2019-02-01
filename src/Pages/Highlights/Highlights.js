@@ -17,7 +17,7 @@ export default class Highlights extends Component{
                         <ul>
                             
                             <li>
-                            <img src={conf}></img><br/>
+                            <img src={conf} alt='congress'></img><br/>
                             <h5>Congress</h5>
                             <p>
                                 Sessions on Blockchain<br/>
@@ -35,7 +35,7 @@ export default class Highlights extends Component{
                         <ul>
                             
                             <li>
-                            <img src={tl}></img><br/>
+                            <img src={tl} alt='techloop'></img><br/>
                             <h5>Techloop</h5>
                             <p>
                                 Member Benefits Presentation<br/>
@@ -50,7 +50,7 @@ export default class Highlights extends Component{
                         <ul>
                             
                             <li>
-                            <img src={hack}></img><br/>
+                            <img src={hack} alt='hack'></img><br/>
                             <h5>Hack-a-thon</h5>
                             <p>
                                 Mentorship by experts<br/>

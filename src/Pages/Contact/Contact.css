@@ -7,7 +7,7 @@
 }
 
 #hand{
-    width: 25vh;
+    width: 35vh;
     z-index: -10;
 }
 
@@ -15,3 +15,59 @@
     font-weight: 500;
 }
 
+.card-list{
+    margin: 36px;
+    margin-top: 84px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-list::after{
+    border-bottom: 1px solid #333;
+    padding: 24px 0;
+    width: 40%;
+    display: block;
+    content: '';
+}
+
+.card{
+    margin: 28px;
+    text-align: center;
+    display: inline-block;
+    padding: 3vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    transition: 0.3s;
+}
+
+.info>h5{
+    font-size: 16px;
+}
+
+.info{
+    margin: 26px 0;
+    color: black;
+}
+
+
+.card>img{
+    width: 16vh;
+    margin-bottom: 3vh;
+    border-radius: 50%;
+}
+
+.card:hover{
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card>h3{
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.card>h4{
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+}

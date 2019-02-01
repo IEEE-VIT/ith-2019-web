@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Navbar,NavItem,Nav} from 'react-bootstrap';
 import './Nav.css';
-import logo from '../../graphics/itclogo.svg';
 
 export default class Navigation extends Component{
     constructor(){
@@ -24,7 +23,6 @@ export default class Navigation extends Component{
 
         window.addEventListener('resize', () => {
             var height = window.innerHeight;
-            console.log(height)
             if (height < 453){
                 this.setState({transparent: false})
             }
@@ -39,7 +37,7 @@ export default class Navigation extends Component{
             <Navbar fluid inverse={this.state.transparent} fixedTop collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                    <img src={logo}/>
+                    <div id='itclogo'>ITC</div>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>

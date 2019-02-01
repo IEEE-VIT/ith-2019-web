@@ -2,7 +2,11 @@
     background-color: #1a1718;
     background-image: radial-gradient(circle,rgba(255,255,255,0.36),#1a1718
     );
-    padding: 48px;
+    padding: 48px 0;
+}
+
+#abouti-row{
+    margin-top: 26px;
 }
 
 #abouti>h2{
@@ -13,21 +17,34 @@
     display: inline; 
 }
 
-#abouti-row>.col-md-6>h4{
+#abouti-row>.col-md-6>h3{
     color: #fff;
     border: none;
+    font-weight: bolder
 }
 
 #abouti-row>.col-md-6>p{
     color: #fff;
-    font-size: 2vh;
-    padding: 8vh;
+    font-size: 2.3vh;
     font-weight: 600;
     text-align: justify;
+    padding: 20px 0;
 }
 
 
 #abouti>.container{
     margin-top: 72px;
 }
+
+@media only screen and (min-width: 768px) {
+    /* Desktop */
+    #abouti-row>.col-md-6>p{
+        padding: 48px;
+    }
+
+    #abouti-row{
+        margin-top: 74px;
+    }
+}
+
 

@@ -36,7 +36,7 @@ export default class Navigation extends Component{
     }
     render(){
         return(
-            <Navbar inverse={this.state.transparent} fixedTop collapseOnSelect>
+            <Navbar fluid inverse={this.state.transparent} fixedTop collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
                     <img src={logo}/>
@@ -48,6 +48,7 @@ export default class Navigation extends Component{
                         <NavItem href='#aboutc'>ABOUT</NavItem>
                         <NavItem>HIGHLIGHTS</NavItem>
                         <NavItem>ITINERARY</NavItem>
+                        <NavItem>BROCHURE</NavItem>
                         <NavItem>SPEAKERS</NavItem>
                         <NavItem>SPONSORS</NavItem>
                         <NavItem>IEEE-VIT</NavItem>

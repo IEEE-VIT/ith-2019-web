@@ -8,10 +8,9 @@ export default class Contact extends Component{
         window.addEventListener('scroll', () => {
             var wScroll = document.documentElement.scrollTop;
             var hand = document.getElementById('hand-holder');
-
             var winH = window.innerHeight;
-            if (winH < 600) {
-                hand.style.transform = 'translate(0,'+(1650-wScroll*0.75)+'px)';
+            if (winH < 700) {
+                hand.style.transform = 'translate(0,'+(2000-wScroll*0.75)+'px)';
             }
 
             else {
@@ -25,10 +24,10 @@ export default class Contact extends Component{
             <div id='contact'>
             <Grid>
                 <Row>
-                    <Col clas md={6} lg={6} xsHidden smHidden>
+                    <Col clas md={4} lg={4} xsHidden smHidden>
                         <div id='hand-holder'><img id='hand' src={hand}/></div>
                     </Col>
-                    <Col id='contact-info' md={6} lg={6}>
+                    <Col id='contact-info' md={8} lg={8}>
                         <h3><strong>Reach out to us</strong></h3>
                         <div className='card-list'>
                             <div className='profile-card'>

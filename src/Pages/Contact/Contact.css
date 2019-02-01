@@ -7,10 +7,11 @@
 }
 
 #hand{
-    width: 20vh;
+    width: 25vh;
     z-index: -10;
 }
 
 #contact-info h2{
     font-weight: 500;
 }
+

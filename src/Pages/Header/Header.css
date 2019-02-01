@@ -77,6 +77,7 @@ font-weight: 900;
     border: #ea1d78 solid;
     border-radius: 0;
     transition: 0.35s;
+    margin: 24px 0;
 }
 
 .btn:hover{

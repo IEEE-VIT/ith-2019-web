@@ -17,7 +17,7 @@ export default class Header extends Component{
         return(
             <div id='header'>
                 <div className='overlay'>
-                    <Grid>
+                    <Grid id='header-container' fluid>
                         <Row className='show-grid header-row'>
                             <Col className='title' lg={6} md={6}>
                                 <div className='content'>
@@ -28,7 +28,7 @@ export default class Header extends Component{
 
                                     <div id='dates'>
                                     <h5>VIT, Vellore</h5>
-                                    <h5>1<sup>st</sup> & 2<sup>nd</sup> August</h5>
+                                    <h5>29<sup>th</sup> & 31<sup>st</sup> August</h5>
                                     <div className='btn'><a><strong>REGISTER</strong></a></div>
                                     </div>
                                 </div>

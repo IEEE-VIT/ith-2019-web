@@ -9,7 +9,7 @@ export default class AboutC extends Component{
     render(){
         return(
             <div id='aboutc'>
-            <Grid>
+            <Grid fluid>
                 <Row id='r1' className='show-grid'>
                     <Col md={6} xsHidden smHidden>
                         <img id='aboutc-img' src={img1}></img>
@@ -19,7 +19,9 @@ export default class AboutC extends Component{
                         <p>
                             The <strong>IEEE Techloop Congress</strong> is a place for people to come together, collaborate and network. With informative and engaging technical sessions on some of the most promising areas of technology like Artificial Intelligence , Blockchain Technology and Robotics, this is a place where future innovators and enthusiasts can grow, learn, and discuss their ideas. 
                             With some of the most knowledgeable and reputed speakers from all around the country present, ITC is bound to be the best place for delegates to gain experience from some of the best in their field.
+                            This year's theme is <strong>Machine Learning</strong> and <strong>Internet of Things.</strong>
                         </p>
+                    
                     </Col>
                 </Row>
 
@@ -27,8 +29,12 @@ export default class AboutC extends Component{
                     <Col id='hackiv-desc' md={6} lg={6}>
                         <h4>HackIV</h4>
                         <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec gravida dui. Maecenas et nulla et eros cursus ornare sit amet non felis. Curabitur ac suscipit ex. Nulla eros massa, euismod et risus a, tincidunt aliquet est. Pellentesque sit amet ornare mauris. Mauris nec massa laoreet, hendrerit sapien sit amet, tempus sem. Aenean vitae porta neque, consectetur luctus justo.
-                        Integer tincidunt nisi sit amet erat molestie maximus. Sed nunc diam, aliquam id turpis non, dignissim fringilla eros. 
+                        IEEE-VIT proudly presents a one-of-a-kind Hack-a-thon, called Hack-IV. WE call upon developers and designers from
+                        all over the country to come and join us in coing up with new and innovative solutions for real world problems. A 24 hour hack,
+                        from the 4<sup>th</sup> of March (7:00 PM) to 5<sup>th</sup> of March (7:00 PM), at HackIV, you will get the opportunity 
+                        to meet students and professionals from bleeding edges of AI and IoT. HackIV will also include mini-events that do have a 
+                        impact on the result of the hack-a-thon. A beginner? Don't have an idea or even a team? Doesn't matter, our mentors will
+                        be providing their invaluable insights to turn your ideas into reality. 
                         </p>
                     </Col>
                     <Col md={6} xsHidden smHidden lg={6}>

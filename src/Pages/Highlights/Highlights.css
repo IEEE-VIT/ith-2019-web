@@ -1,6 +1,7 @@
 #highlights{
     background-image: radial-gradient(circle,#fff,#d3d3d3);
-    padding: 48px;
+    padding-top: 48px;
+
 }
 
 
@@ -31,7 +32,9 @@
     padding: 0;
   }
   .sec ul li {
-    padding: 40px;
+    padding: 40px 0;
+    padding-left: 28px;
+    padding-right: 28px;
     width: 300px;
     transition: box-shadow .3s;
   }
@@ -62,7 +65,7 @@
   .sec ul li h5 {
     color: #6f6f6f;
     display: inline-block;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 100;
     transition: color .3s;
   }
@@ -81,8 +84,9 @@
   .sec ul li p {
       margin-top: 38px;
     color: #6f6f6f;
-    text-align: justify;
-    font-size: 14px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 42px;
     transition: color .3s;
   }
   

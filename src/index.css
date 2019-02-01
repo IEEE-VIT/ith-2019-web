@@ -16,5 +16,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+@media only screen and (min-width: 768px) {
+  /* Desktop */
+  .container-fluid{
+    margin-left: 8vh;
+    margin-right: 8vh;
+  }
+
+}
+
+
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');

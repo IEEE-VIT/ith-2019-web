@@ -1,6 +1,6 @@
 #aboutc{
-    padding: 48px;
     padding-top: 72px;
+    padding-bottom: 72px;
 }
 
 h4{
@@ -23,7 +23,9 @@ h4{
 }
 
 #congress-desc>p,#hackiv-desc>p{
-    margin-top: 48px; 
+    margin-top: 48px;
+    font-size: 1.8vh; 
+    font-weight: 500;
 }
 
 
@@ -35,6 +37,8 @@ h4{
 #r1{
     margin-bottom: 82px;
 }
+
+
 
 
 

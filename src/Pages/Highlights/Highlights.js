@@ -20,7 +20,11 @@ export default class Highlights extends Component{
                             <img src={conf}></img><br/>
                             <h5>Congress</h5>
                             <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut purus porta, posuere leo id, sodales massa. Ut placerat convallis mi eu lobortis. Pellentesque erat libero, posuere et porttitor at, auctor ac arcu. Aenean dapibus sapien vitae diam auctor, at vehicula nulla molestie. 
+                                Sessions on Blockchain<br/>
+                                Sessions on AI <br/>
+                                Student Branch presentations<br/>
+                                230+ Delegates<br/>
+                                10 IEEE Sections
                             </p>
                             </li>
                         </ul>
@@ -34,7 +38,9 @@ export default class Highlights extends Component{
                             <img src={tl}></img><br/>
                             <h5>Techloop</h5>
                             <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut purus porta, posuere leo id, sodales massa. Ut placerat convallis mi eu lobortis. Pellentesque erat libero, posuere et porttitor at, auctor ac arcu. Aenean dapibus sapien vitae diam auctor, at vehicula nulla molestie. 
+                                Member Benefits Presentation<br/>
+                                3 Techloop sessions <br/>
+                                Engaging activities<br/><br/><br/>
                             </p>
                             </li>
                         </ul>
@@ -47,7 +53,10 @@ export default class Highlights extends Component{
                             <img src={hack}></img><br/>
                             <h5>Hack-a-thon</h5>
                             <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut purus porta, posuere leo id, sodales massa. Ut placerat convallis mi eu lobortis. Pellentesque erat libero, posuere et porttitor at, auctor ac arcu. Aenean dapibus sapien vitae diam auctor, at vehicula nulla molestie. 
+                                Mentorship by experts<br/>
+                                Cash prizes <br/>
+                                Exciting goodies<br/>
+                                Mini-events<br/><br/>
                             </p>
                             </li>
                         </ul>

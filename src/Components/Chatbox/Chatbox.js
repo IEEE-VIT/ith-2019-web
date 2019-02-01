@@ -15,18 +15,7 @@ export default class Chatbox extends Component{
         })
         .then(res => res.json())
         .then(data => {
-            // this.setState({
-            //     Confidence: 'Confidence: '+data.Score+'%',
-            //     Intent: 'Intent: '+data.Action,
-            //     Message: data.Message
-            // })
-            if (data.score > 65){
-
-                addResponseMessage(data.Message)
-            }
-            else{
-                addResponseMessage('Hmm, I don\t quite understand.')
-            }
+            addResponseMessage(data.Message)
         })
     }
     componentDidMount(){
@@ -36,7 +25,7 @@ export default class Chatbox extends Component{
         return(
             <Widget
                 handleNewUserMessage={this.messageHandler}
-                senderPlaceHolder='Typing a message..'
+                senderPlaceHolder='Have a question?'
                 title="Lexie"
                 subtitle="I can asnwer your questions"
             />

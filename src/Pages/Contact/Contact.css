@@ -71,3 +71,14 @@
     font-weight: 500;
     font-size: 18px;
 }
+
+#ieee_logo{
+    width: 20vh;
+    height: auto;
+    margin: 40px 0;
+}
+
+#icon-holder{
+    color: black;
+
+}

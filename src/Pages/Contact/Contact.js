@@ -4,6 +4,7 @@ import {Grid,Row,Col} from 'react-bootstrap';
 import hand from '../../graphics/contact.svg';
 import druv from '../../graphics/druvang.jpeg';
 import neel from '../../graphics/Neel.jpeg';
+import ieee from '../../graphics/ieee_logo.png';
 
 export default class Contact extends Component{
     componentDidMount(){
@@ -12,7 +13,7 @@ export default class Contact extends Component{
             var hand = document.getElementById('hand-holder');
             var winH = window.innerHeight;
             if (winH < 700) {
-                hand.style.transform = 'translate(0,'+(2200-wScroll*0.75)+'px)';
+                hand.style.transform = 'translate(0,'+(2500-wScroll*0.75)+'px)';
             }
 
             else {
@@ -54,6 +55,7 @@ export default class Contact extends Component{
                         </div>       
                         <div className='media'>
                             <h3>Stay Connected</h3>
+                            <img id='ieee_logo' src={ieee} alt='ieee-vit'/>
                         </div>
                     </Col>
                 </Row>

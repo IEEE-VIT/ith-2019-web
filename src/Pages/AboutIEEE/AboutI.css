@@ -1,4 +1,4 @@
-#abouti{
+#about-ieeevit{
     background-color: #1a1718;
     background-image: radial-gradient(circle,rgba(255,255,255,0.36),#1a1718
     );
@@ -6,11 +6,11 @@
     padding-top: 72px;
 }
 
-#abouti-row{
+#about-ieeevit-row{
     margin-top: 26px;
 }
 
-#abouti>h2{
+#about-ieeevit>h2{
     color: #fff;
     font-weight: 800;
     border-bottom: 2px solid #ea1d78;
@@ -33,7 +33,7 @@
 }
 
 
-#abouti>.container{
+#about-ieeevit>.container{
     margin-top: 72px;
 }
 

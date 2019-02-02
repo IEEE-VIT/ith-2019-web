@@ -32,6 +32,7 @@ export default class Navigation extends Component{
         })
         
     }
+
     render(){
         return(
             <Navbar fluid inverse={this.state.transparent} fixedTop collapseOnSelect>
@@ -49,7 +50,7 @@ export default class Navigation extends Component{
                         <NavItem>BROCHURE</NavItem>
                         <NavItem>SPEAKERS</NavItem>
                         <NavItem>SPONSORS</NavItem>
-                        <NavItem href='#abouti-row'>IEEE-VIT</NavItem>
+                        <NavItem href='#abouti'>IEEE-VIT</NavItem>
                         <NavItem href='#contact'>CONTACT US</NavItem>
                     </Nav>
                 </Navbar.Collapse>

@@ -5,6 +5,10 @@ import hand from '../../graphics/contact.svg';
 import druv from '../../graphics/druvang.jpeg';
 import neel from '../../graphics/Neel.jpeg';
 import ieee from '../../graphics/ieee_logo.png';
+import fb from '../../graphics/facebook.svg';
+import ig from '../../graphics/ig.svg';
+import li from '../../graphics/linkedin.svg';
+import tw from '../../graphics/twitter.svg';
 
 export default class Contact extends Component{
     componentDidMount(){
@@ -13,11 +17,11 @@ export default class Contact extends Component{
             var hand = document.getElementById('hand-holder');
             var winH = window.innerHeight;
             if (winH < 700) {
-                hand.style.transform = 'translate(0,'+(2700-wScroll*0.75)+'px)';
+                hand.style.transform = 'translate(0,'+(2800-wScroll*0.75)+'px)';
             }
 
             else {
-                hand.style.transform = 'translate(0,'+(3000-wScroll*0.75)+'px)';
+                hand.style.transform = 'translate(0,'+(3100-wScroll*0.75)+'px)';
             }
         }, { passive: true })
     }
@@ -56,6 +60,12 @@ export default class Contact extends Component{
                         <div className='media'>
                             <h3>Stay Connected</h3>
                             <img id='ieee_logo' src={ieee} alt='ieee-vit'/>
+                            <div className='icons'>
+                                <a href='https://www.facebook.com/IEEEVIT/'><img src={fb} alt='facebook'/></a>
+                                <a href='https://www.instagram.com/ieeevitvellore/?hl=en'><img src={ig} alt='instagram'/></a>
+                                <a href='https://twitter.com/ITCVIT2018'><img src={tw} alt='twitter'/></a>
+                                <a href='https://www.linkedin.com/company/ieee-vit-vellore/'><img src={li} alt='linkedin'/></a>
+                            </div>
                         </div>
                     </Col>
                 </Row>

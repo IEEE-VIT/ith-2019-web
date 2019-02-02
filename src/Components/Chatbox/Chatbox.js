@@ -27,7 +27,7 @@ export default class Chatbox extends Component{
                 handleNewUserMessage={this.messageHandler}
                 senderPlaceHolder='Have a question?'
                 title="Lexie"
-                subtitle="I can asnwer your questions"
+                subtitle="I can answer your questions"
             />
         );
     }

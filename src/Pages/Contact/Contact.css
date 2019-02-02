@@ -3,6 +3,7 @@
     background-attachment: fixed;
     padding: 48px;
     padding-bottom: 0;
+    padding-top: 72px;
     overflow: hidden;
 }
 
@@ -86,4 +87,19 @@
 #hand-holder{
     position: relative;
     bottom: 0;
+
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.icons>a>img{
+    width: 30px;
+    margin: 12px;
 }

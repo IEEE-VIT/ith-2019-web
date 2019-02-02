@@ -28,7 +28,7 @@ export default class Header extends Component{
 
                                     <div id='dates'>
                                     <h5>VIT, Vellore</h5>
-                                    <h5>29<sup>th</sup> & 31<sup>st</sup> August</h5>
+                                    <h5>29<sup>th</sup> & 31<sup>st</sup> March</h5>
                                     <div className='btn'><a><strong>REGISTER</strong></a></div>
                                     </div>
                                 </div>

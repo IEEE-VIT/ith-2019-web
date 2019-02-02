@@ -8,7 +8,7 @@ import tl from '../../graphics/techloop.png';
 export default class AboutC extends Component{
     render(){
         return(
-            <div id='aboutc'>
+            <div id='about'>
             <Grid fluid>
                 <Row id='r1' className='show-grid'>
                     <Col md={6} xsHidden smHidden>

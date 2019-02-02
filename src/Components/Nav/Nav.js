@@ -44,14 +44,14 @@ export default class Navigation extends Component{
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav pullRight>
-                        <NavItem href='#aboutc'>ABOUT</NavItem>
+                        <NavItem href='#about'>ABOUT</NavItem>
                         <NavItem href='#highlights'>HIGHLIGHTS</NavItem>
                         <NavItem>ITINERARY</NavItem>
                         <NavItem>BROCHURE</NavItem>
                         <NavItem>SPEAKERS</NavItem>
                         <NavItem>SPONSORS</NavItem>
-                        <NavItem href='#abouti'>IEEE-VIT</NavItem>
-                        <NavItem href='#contact'>CONTACT US</NavItem>
+                        <NavItem href='#about-ieeevit'>IEEE-VIT</NavItem>
+                        <NavItem href='#contact-us'>CONTACT US</NavItem>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

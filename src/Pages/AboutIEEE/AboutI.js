@@ -5,7 +5,7 @@ import {Grid,Row,Col} from 'react-bootstrap';
 export default class AboutI extends Component{
     render(){
         return(
-            <div id='abouti'>
+            <div id='about-ieeevit'>
                 <h2>About Us</h2>
                 <Grid >
                     <Row id='abouti-row'>

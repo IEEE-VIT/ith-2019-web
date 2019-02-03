@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import LandingPage from './LandingPage';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Register from './Pages/Register/Register';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
 class App extends Component {
@@ -9,7 +10,10 @@ class App extends Component {
     return (
       <div className='App'>
       <Router>
-        <Route path='/' component={LandingPage}/>
+        <Switch>
+          <Route exact path='/' component={LandingPage}/>
+          <Route path='/register' component={Register}/>
+        </Switch>
       </Router>
       </div>
     );

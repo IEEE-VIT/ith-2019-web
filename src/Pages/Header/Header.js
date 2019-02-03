@@ -28,8 +28,10 @@ export default class Header extends Component{
 
                                     <div id='dates'>
                                     <h5>VIT, Vellore</h5>
-                                    <h5>29<sup>th</sup> & 31<sup>st</sup> March</h5>
-                                    <div className='btn'><a><strong>REGISTER</strong></a></div>
+                                    <h5>29<sup>th</sup> - 31<sup>st</sup> March</h5>
+                                    <div
+                                    onClick={() => window.location.href='/register'}
+                                     className='btn'>REGISTER</div>
                                     </div>
                                 </div>
                             </Col>

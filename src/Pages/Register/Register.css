@@ -1,0 +1,14 @@
+#register{
+    background-color: #1a1718;
+    background-image: radial-gradient(circle,rgba(255,255,255,0.36),#1a1718);
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#register>h3{
+    color: #fff;
+}

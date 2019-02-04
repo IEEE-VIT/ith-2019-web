@@ -20,6 +20,36 @@
 
 }
 
+.lol{
+    justify-content: left;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#date-holder{
+    display: inline-block;
+}
+#cal-ico{
+    width: 12px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+
+#loc-ico{
+    width: 12px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+
+#itc_main{
+    width: 300px;
+}
+
 .content{
     text-align: left;
     color: white;

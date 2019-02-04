@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './Header.css'
 import {Grid,Row,Col} from 'react-bootstrap';
-import img from '../../graphics/238.png'
-
+import img from '../../graphics/238.png';
+import main_logo from '../../graphics/itc_main.png';
+import calendar from '../../graphics/calendar.png';
+import location from '../../graphics/location.png';
 export default class Header extends Component{
 
     componentDidMount(){
@@ -21,21 +23,19 @@ export default class Header extends Component{
                         <Row className='show-grid header-row'>
                             <Col className='title' lg={6} md={6}>
                                 <div className='content'>
-                                    <h3>IEEE</h3>
-                                    <h1>Techloop</h1>
-                                    <h1 id='sec-heading'>Congress &</h1>
-                                    <h1 id='sec-heading'>Hack<strong>IV</strong></h1>
+
+                                    <img id='itc_main' src={main_logo}/>
 
                                     <div id='dates'>
-                                    <h5>VIT, Vellore</h5>
-                                    <h5>29<sup>th</sup> - 31<sup>st</sup> March</h5>
+                                    <div className='lol'><img id='loc-ico' src={location}/><h5>VIT, Vellore</h5></div>
+                                    <div className='lol'><img id='cal-ico' src={calendar}/><h5>29<sup>th</sup> - 31<sup>st</sup> March, 2019</h5></div>
                                     <div
                                     onClick={() => window.location.href='/register'}
                                      className='btn'>REGISTER</div>
                                     </div>
                                 </div>
                             </Col>
-                            <Col md={6} lg={6} xsHidden smHidden>
+                            <Col mdHidden xsHidden smHidden>
                                 <img src={img} className='graphics'></img>
                             </Col>
                         </Row>

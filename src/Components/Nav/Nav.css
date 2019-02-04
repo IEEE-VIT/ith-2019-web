@@ -26,6 +26,7 @@
     font-weight: 800;
 }
 
+
 .navbar-inverse .navbar-toggle {
     border: none;
 }
@@ -58,3 +59,20 @@
         margin-top: 3.8vh;
     }
 }
+
+@media (max-width: 767.98px) { 
+    /* Phones */
+
+    .in{
+        background-color: #fff;
+    }
+
+    .navbar-inverse .navbar-nav>li>a{
+        color: black;
+    }
+
+    .collapsing{
+        background-color: #fff;
+        color: black;
+    }
+ }

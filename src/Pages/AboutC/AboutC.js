@@ -11,7 +11,7 @@ export default class AboutC extends Component{
             <div id='about'>
             <Grid fluid>
                 <Row id='r1' className='show-grid'>
-                    <Col md={6} xsHidden smHidden>
+                    <Col md={6} mdHidden xsHidden smHidden>
                         <img id='aboutc-img' alt='congress' src={img1}></img>
                     </Col>
                     <Col id='congress-desc' md={6}>
@@ -36,13 +36,13 @@ export default class AboutC extends Component{
                         be providing their invaluable insights to turn your ideas into reality. 
                         </p>
                     </Col>
-                    <Col md={6} xsHidden smHidden lg={6}>
+                    <Col md={6} mdHidden xsHidden smHidden lg={6}>
                         <img id='aboutc-img' alt='hackiv' src={img2}></img>
                     </Col>
                 </Row>
 
                 <Row id='r3' className='show-grid'>
-                    <Col md={6} xsHidden smHidden>
+                    <Col md={6} mdHidden xsHidden smHidden>
                         <img id='tl-img' alt='techloop' src={tl}></img>
                     </Col>
                     <Col id='congress-desc' md={6}>

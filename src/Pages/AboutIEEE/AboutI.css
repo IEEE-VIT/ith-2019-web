@@ -1,7 +1,10 @@
 #about-ieeevit{
     background-color: #1a1718;
-    background-image: radial-gradient(circle,rgba(255,255,255,0.36),#1a1718
-    );
+    background-image: url('../../graphics/blackbg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     padding: 48px 0;
     padding-top: 72px;
 }

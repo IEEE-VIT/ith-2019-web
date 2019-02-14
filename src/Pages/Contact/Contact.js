@@ -17,7 +17,7 @@ export default class Contact extends Component{
             var hand = document.getElementById('hand-holder');
             var winH = window.innerHeight;
             if (winH < 700) {
-                hand.style.transform = 'translate(0,'+(2800-wScroll*0.75)+'px)';
+                hand.style.transform = 'translate(0,'+(2600-wScroll*0.75)+'px)';
             }
 
             else {

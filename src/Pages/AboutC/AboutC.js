@@ -10,23 +10,9 @@ export default class AboutC extends Component{
         return(
             <div id='about'>
             <Grid fluid>
-                <Row id='r1' className='show-grid'>
-                    <Col md={6} mdHidden xsHidden smHidden>
-                        <img id='aboutc-img' alt='congress' src={img1}></img>
-                    </Col>
-                    <Col id='congress-desc' md={6}>
-                        <h4>Congress</h4>
-                        <p>
-                            The <strong>IEEE Techloop Congress</strong> is a place for people to come together, collaborate and network. With informative and engaging technical sessions on some of the most promising areas of technology like Artificial Intelligence , Blockchain Technology and Robotics, this is a place where future innovators and enthusiasts can grow, learn, and discuss their ideas. 
-                            With some of the most knowledgeable and reputed speakers from all around the country present, ITC is bound to be the best place for delegates to gain experience from some of the best in their field.
-                            This year's theme is <strong>Machine Learning</strong> and <strong>Internet of Things.</strong>
-                        </p>     
-                    </Col>
-                </Row>
-
                 <Row id='r2' className='show-grid'>
                     <Col id='hackiv-desc' md={6} lg={6}>
-                        <h4>HackIV</h4>
+                        <h4>Hack-a-thon</h4>
                         <p>
                         IEEE-VIT proudly presents a one-of-a-kind Hack-a-thon, called Hack-IV. WE call upon developers and designers from
                         all over the country to come and join us in coing up with new and innovative solutions for real world problems. A 24 hour hack,

@@ -38,7 +38,7 @@ export default class Navigation extends Component{
             <Navbar fluid inverse={this.state.transparent} fixedTop collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                    <div id='itclogo'>ITC</div>
+                    <div id='itclogo'>ITH</div>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>

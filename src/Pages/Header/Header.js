@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Header.css'
 import {Grid,Row,Col} from 'react-bootstrap';
-import img from '../../graphics/238.png';
+import img from '../../graphics/home_img.png';
 import main_logo from '../../graphics/ith_logo.png';
 import calendar from '../../graphics/calendar.png';
 import location from '../../graphics/location.png';

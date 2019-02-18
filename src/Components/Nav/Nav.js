@@ -38,7 +38,7 @@ export default class Navigation extends Component{
             <Navbar fluid inverse={this.state.transparent} fixedTop collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                    <div id='itclogo'>ITH</div>
+                    <a href='http://ith.ieeevit.com'><div id='itclogo'>ITH</div></a>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
@@ -46,10 +46,10 @@ export default class Navigation extends Component{
                     <Nav pullRight>
                         <NavItem href='#about'>ABOUT</NavItem>
                         <NavItem href='#highlights'>HIGHLIGHTS</NavItem>
-                        <NavItem>ITINERARY</NavItem>
+                        {/* <NavItem>ITINERARY</NavItem> */}
                         <NavItem>BROCHURE</NavItem>
-                        <NavItem>SPEAKERS</NavItem>
-                        <NavItem>SPONSORS</NavItem>
+                        {/* <NavItem>SPEAKERS</NavItem>
+                        <NavItem>SPONSORS</NavItem> */}
                         <NavItem href='#about-ieeevit'>IEEE-VIT</NavItem>
                         <NavItem href='#contact-us'>CONTACT US</NavItem>
                     </Nav>

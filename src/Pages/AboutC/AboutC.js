@@ -36,7 +36,7 @@ export default class AboutC extends Component{
                         <p>
                         6 years ago, IEEE VIT developed a concept which eventually became the core belief of Techloop - Students Teaching Students. Teaching by means of providing an environment that promotes interaction and hands-on experience. 
                         ITC 2019 presents 3 parallel Techloop tracks:
-                        Electronics(E+), Android App Development (A+) and Machine Learning (ML). These sessions will be conducted by the members of the IEEE VIT student branch and will provide a concrete base to empower self learning for further development. 
+                        Electronics(E+), UI/UX and Machine Learning (ML). These sessions will be conducted by the members of the IEEE VIT student branch and will provide a concrete base to empower self learning for further development. 
 
                         </p>     
                     </Col>

@@ -47,7 +47,7 @@ export default class Navigation extends Component{
                         <NavItem href='#about'>ABOUT</NavItem>
                         <NavItem href='#highlights'>HIGHLIGHTS</NavItem>
                         {/* <NavItem>ITINERARY</NavItem> */}
-                        <NavItem>BROCHURE</NavItem>
+                        <NavItem href='https://drive.google.com/file/d/1NJINJwIMcK9D26XdZsKKrtCuLhj9ms2g/view' target='_top'>BROCHURE</NavItem>
                         {/* <NavItem>SPEAKERS</NavItem>
                         <NavItem>SPONSORS</NavItem> */}
                         <NavItem href='#about-ieeevit'>IEEE-VIT</NavItem>

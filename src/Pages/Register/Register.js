@@ -13,6 +13,8 @@ export default class Register extends Component{
             regno: '',
             city: '',
             ieee_member: false,
+            block: '',
+            room: '',
             ieee_id: '',
             q1: '',
             q2: '',
@@ -45,6 +47,14 @@ export default class Register extends Component{
         this.setState({city: event.target.value})
     }
 
+    onBlockChange = (event) => {
+        this.setState({block: event.target.value})
+    }
+
+    onRoomChange = (event) => {
+        this.setState({room: event.target.value})
+    }
+
     onIMChange = (event) => {
         this.setState({ieee_id: event.target.value})
     }
@@ -62,7 +72,8 @@ export default class Register extends Component{
     }
 
     onRegister = () => {
-        alert('The registrations will begin shortly! Come back later.')
+        alert('The registrations will begin shortly! Come back later.');
+        console.log(this.state)
     }
 
     extCheck = () => {
@@ -118,6 +129,14 @@ export default class Register extends Component{
                                 <FormGroup validationState={this.mobValidator()}>
                                     <FormControl onChange={this.onMobChange} placeholder='Mobile Number' type="text" />             
                                 </FormGroup>
+
+                                <FormGroup>
+                                    <FormControl onChange={this.onUniChange} placeholder='University / College Name' type="text" />                
+                                </FormGroup>
+
+                                <FormGroup>
+                                    <FormControl onChange={this.onCityChange} placeholder='City' type="text" />                
+                                </FormGroup>
                                 
                                 <FormGroup>
                                     <Checkbox onClick={this.extCheck} readOnly>
@@ -125,16 +144,17 @@ export default class Register extends Component{
                                     </Checkbox>
                                 </FormGroup>
 
-                                <FormGroup>
-                                    <FormControl onChange={this.onUniChange} placeholder='University / College Name' type="text" />                
-                                </FormGroup>
 
                                 <FormGroup>
                                     <FormControl disabled={this.state.external} onChange={this.onRegChange}  placeholder='Registration Number (Not for external students)' type="text" />                
                                 </FormGroup>
 
                                 <FormGroup>
-                                    <FormControl onChange={this.onCityChange} placeholder='City' type="text" />                
+                                    <FormControl disabled={this.state.external} onChange={this.onBlockChange}  placeholder='Hostel Block' type="text" />                
+                                </FormGroup>
+
+                                <FormGroup>
+                                    <FormControl disabled={this.state.external} onChange={this.onRoomChange}  placeholder='Room Number' type="text" />                
                                 </FormGroup>
 
                                 <FormGroup>

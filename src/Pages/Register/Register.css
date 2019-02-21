@@ -76,6 +76,10 @@
     color: #fff;
 }
 
+#form-holder{
+    padding: 48px;
+}
+
 @media (min-width: 992px) { 
     #form-holder{
         margin-left: 250px;

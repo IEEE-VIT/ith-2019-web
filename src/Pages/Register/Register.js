@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './Register.css';
 import { form, FormGroup, Checkbox,ControlLabel, FormControl, Grid,Row,Col, Button } from 'react-bootstrap';
+import Recaptcha from 'react-recaptcha';
+
+
+
 export default class Register extends Component{
     constructor(){
         super();
@@ -16,11 +20,26 @@ export default class Register extends Component{
             block: '',
             room: '',
             ieee_id: '',
+            acc: false,
             q1: '',
             q2: '',
-            q3: ''
+            q3: '',
+            q4 : '',
+            q5: '',
+            verified: false,
+            btn_text: 'Register'
         }
 
+    }
+
+    onCaptchaLoad = () =>{
+        console.log("reCaptcha laoded")
+    }
+
+    verifyCaptcha = (response) => {
+        if(response){
+            this.setState({verified: true})
+        }
     }
 
     onNameChange = (event) => {
@@ -71,9 +90,52 @@ export default class Register extends Component{
         this.setState({q3: event.target.value})
     }
 
+    onQ4Change = (event) => {
+        this.setState({q4: event.target.value})
+    }
+
+    onQ5Change = (event) => {
+        this.setState({q5: event.target.value})
+    }
+
     onRegister = () => {
-        alert('The registrations will begin shortly! Come back later.');
         console.log(this.state)
+        if (
+            this.state.name === '' ||
+            this.state.email === '' ||
+            this.state.mobile === '' ||
+            this.state.university === '' 
+        ){
+            alert('Please fill in the required fields')
+        }
+
+        else{
+            if (!this.state.verified){
+                alert('Please verify that you are a human!')
+            }
+
+            else{
+                this.setState({btn_text: 'Please wait..'})
+                var req_body = this.state;
+                delete req_body.btn_text;
+                fetch('https://ith2019-api.herokuapp.com/register',{
+                    method: 'post',
+                    headers: {'Content-type':'application/json'},
+                    credentials: 'include',
+                    body: req_body
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if(data.Status === 'Success'){
+                        alert('Thank you! You have successfully registered!')
+                    }
+                    else{
+                        alert('Oops! Something went wrong - ' + data.Message)
+                    }
+                    this.setState({btn_text: 'Register'})
+                })
+            }
+        }
     }
 
     extCheck = () => {
@@ -82,6 +144,10 @@ export default class Register extends Component{
 
     ieeeCheck = () => {
         this.setState({ieee_member: !this.state.ieee_member})
+    }
+
+    accCheck = () => {
+        this.setState({ieee_member: !this.state.acc})
     }
 
     mobValidator(){
@@ -144,6 +210,11 @@ export default class Register extends Component{
                                     </Checkbox>
                                 </FormGroup>
 
+                                <FormGroup>
+                                    <Checkbox onClick={this.accCheck} readOnly>
+                                    Check this box if you require accomodation
+                                    </Checkbox>
+                                </FormGroup>
 
                                 <FormGroup>
                                     <FormControl disabled={this.state.external} onChange={this.onRegChange}  placeholder='Registration Number (Not for external students)' type="text" />                
@@ -162,6 +233,7 @@ export default class Register extends Component{
                                     Check this box if you are an IEEE Member
                                     </Checkbox>
                                 </FormGroup>
+                            
 
                                 <FormGroup>
                                     <FormControl disabled={!this.state.ieee_member} onChange={this.onIMChange} placeholder='IEEE Membership ID' type="text" />                
@@ -182,7 +254,23 @@ export default class Register extends Component{
                                     <FormControl onChange={this.onQ3Change} placeholder='Enter your answer' type="text" />                
                                 </FormGroup>
 
-                                <Button onClick={this.onRegister}>Register</Button>
+
+                                <FormGroup>
+                                    <ControlLabel>How did you come to know about us?<br/></ControlLabel>
+                                    <FormControl onChange={this.onQ4Change} placeholder='Enter your answer' type="text" />                
+                                </FormGroup>
+
+
+                                <FormGroup>
+                                    <ControlLabel>Add links to your online profile<br/> (Optional)</ControlLabel>
+                                    <FormControl onChange={this.onQ5Change} placeholder='Eg: LinkedIn, GitHub, Twitter, Kaggle, HackerEarth' type="text" />                
+                                </FormGroup>
+                                <Recaptcha
+                                sitekey='6LddE5MUAAAAAJFfKfPZW3ZoiJOFQTW_lI3bIMGp'
+                                onloadCallback={this.onCaptchaLoad}
+                                verifyCallback={this.verifyCaptcha}
+                                />
+                                <Button onClick={this.onRegister}>{this.state.btn_text}</Button>
                             </form>
                         </div>
                     </Col>

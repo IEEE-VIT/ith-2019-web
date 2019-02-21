@@ -1,14 +1,71 @@
 #register{
     background-color: #1a1718;
-    background-image: radial-gradient(circle,rgba(255,255,255,0.36),#1a1718);
-    height: 100vh;
+    background-image: url('../../graphics/blackbg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
     align-content: center;
     justify-content: center;
-    justify-items: center;
-    align-items: center;
+}
+
+#reg-header{
+    margin: 72px;
+    text-align: center;
+    color: #fff;
 }
 
 #register>h3{
     color: #fff;
 }
+
+.btn-default{
+    color: #fff;
+    font-weight: bold
+}
+
+#form{
+    margin: 12px;
+}
+
+.form-group {
+    margin-bottom: 48px;
+}
+
+.control-label{
+    color: #fff;
+}
+
+.form-group input{
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #fff; 
+    color: #fff;
+}
+
+.form-group input::placeholder{
+   color: rgba(255,255,255,0.5)
+}
+
+.form-group input:focus{
+    box-shadow: none;
+    border-bottom: 2px solid #fff; 
+
+}
+
+.checkbox{
+    color: #fff;
+}
+
+@media (min-width: 992px) { 
+    #form-holder{
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+ }

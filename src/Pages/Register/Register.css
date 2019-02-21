@@ -13,6 +13,19 @@
     justify-content: center;
 }
 
+.form-control[disabled], fieldset[disabled] .form-control {
+    cursor: not-allowed;
+    background-color: rgba(216, 117, 117, 0.1)
+}
+
+.has-error .form-control{
+    box-shadow: none;
+}
+
+.has-error .form-control:focus{
+    box-shadow: none;
+}
+
 #reg-header{
     margin: 72px;
     text-align: center;

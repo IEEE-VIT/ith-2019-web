@@ -159,6 +159,10 @@ export default class Register extends Component{
     mobValidator(){
         var mob_test = /^[0][1-9]\d{9}$|^[1-9]\d{9}$/
         if (mob_test.test(this.state.mobile) || this.state.mobile === ''){
+            if (this.state.error){
+
+                this.setState({error: false})
+            }
             return null
         }
         else{
@@ -174,6 +178,10 @@ export default class Register extends Component{
         var email_test = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         if (email_test.test(this.state.email) || this.state.email === '')
         {
+            if (this.state.error){
+
+                this.setState({error: false})
+            }
             return null
         }
 

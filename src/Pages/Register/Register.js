@@ -124,7 +124,9 @@ export default class Register extends Component{
                     mode: 'no-cors',
                     body: JSON.stringify(req_body)
                 })
-                .then(response => response.json())
+                .then(response => {
+                    console.log(response.json())
+                })
                 .then(data => {
                     if(data.Status === 'Success'){
                         alert('Thank you! You have successfully registered!')

@@ -121,8 +121,7 @@ export default class Register extends Component{
                 fetch('https://ith2019-api.herokuapp.com/register',{
                     method: 'post',
                     headers: {'Content-type':'application/json'},
-                    credentials: 'include',
-                    mode: 'cors',
+                    mode: 'no-cors',
                     body: JSON.stringify(req_body)
                 })
                 .then(response => response.json())

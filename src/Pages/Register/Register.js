@@ -27,6 +27,7 @@ export default class Register extends Component{
             q4 : '',
             q5: '',
             verified: false,
+            error: false,
             btn_text: 'Register'
         }
 
@@ -109,6 +110,10 @@ export default class Register extends Component{
             alert('Please fill in the required fields')
         }
 
+        if (this.state.error){
+            alert('Please check if the email/mobile number has been entered correctly')
+        }
+
         else{
             if (!this.state.verified){
                 alert('Please verify that you are a human!')
@@ -156,6 +161,7 @@ export default class Register extends Component{
             return null
         }
         else{
+            this.setState({error: true})
             return 'error'
         }
     }
@@ -168,6 +174,7 @@ export default class Register extends Component{
         }
 
         else{
+            this.setState({error: true})
             return 'error'
         }
     }

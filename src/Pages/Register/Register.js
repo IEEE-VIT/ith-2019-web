@@ -47,18 +47,12 @@ export default class Register extends Component{
         }
     }
 
-    verifyCallback(recaptchaToken) {
-
-        if (recaptchaToken){
-            this.setState({verified: true})
+    verifyCallback = (recaptchaToken) => {
+        if (Boolean(recaptchaToken)){
+            console.log('Captcha verified!')
+            this.setState({ verified: true })
         }
       }
-
-    verifyCaptcha = (response) => {
-        if(response){
-            this.setState({verified: true})
-        }
-    }
 
     onNameChange = (event) => {
         this.setState({name: event.target.value})
@@ -132,7 +126,7 @@ export default class Register extends Component{
 
         else{
             if (!this.state.verified){
-                alert('Please verify that you are a human!')
+                alert('Captcha failed! Please refresh and try again!')
             }
 
             else{

@@ -125,9 +125,10 @@ export default class Register extends Component{
                     body: JSON.stringify(req_body)
                 })
                 .then(response => {
-                    console.log(response.json())
+                    response.json()
                 })
                 .then(data => {
+                    console.log(data)
                     if(data.Status === 'Success'){
                         alert('Thank you! You have successfully registered!')
                     }

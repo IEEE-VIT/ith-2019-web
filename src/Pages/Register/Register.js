@@ -123,6 +123,7 @@ export default class Register extends Component{
                 this.setState({btn_text: 'Please wait..'})
                 var req_body = this.state;
                 delete req_body.btn_text;
+                delete req_body.error;
                 fetch('https://ith2019-api.herokuapp.com/register',{
                     method: 'post',
                     headers: {'Content-type':'application/json'},
@@ -161,7 +162,10 @@ export default class Register extends Component{
             return null
         }
         else{
-            this.setState({error: true})
+            if (!this.state.error){
+
+                this.setState({error: true})
+            }
             return 'error'
         }
     }
@@ -174,7 +178,10 @@ export default class Register extends Component{
         }
 
         else{
-            this.setState({error: true})
+            if (!this.state.error){
+
+                this.setState({error: true})
+            }
             return 'error'
         }
     }

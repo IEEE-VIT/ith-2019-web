@@ -159,7 +159,7 @@ export default class Register extends Component{
     }
 
     accCheck = () => {
-        this.setState({ieee_member: !this.state.acc})
+        this.setState({acc: !this.state.acc})
     }
 
     mobValidator(){

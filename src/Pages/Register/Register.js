@@ -47,7 +47,7 @@ export default class Register extends Component{
         }
     }
 
-    verifyCallback = (recaptchaToken) => {
+    verifyCallback(recaptchaToken) {
         if (Boolean(recaptchaToken)){
             console.log('Captcha verified!')
             this.setState({ verified: true })
@@ -118,10 +118,6 @@ export default class Register extends Component{
             this.state.university === '' 
         ){
             alert('Please fill in the required fields')
-        }
-
-        if (this.state.error){
-            alert('Please check if the email/mobile number has been entered correctly')
         }
 
         else{

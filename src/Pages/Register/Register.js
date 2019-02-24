@@ -111,7 +111,6 @@ export default class Register extends Component{
     }
 
     onRegister = () => {
-        console.log(this.state)
         if (
             this.state.name === '' ||
             this.state.email === '' ||
@@ -145,7 +144,7 @@ export default class Register extends Component{
                         alert('Oops! Something went wrong - ' + data.Message)
                     }
                     this.setState({btn_text: 'Register'})
-                    // location.reload();
+                    window.location.reload();
                 })
             }
         }

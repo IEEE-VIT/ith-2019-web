@@ -47,7 +47,7 @@ export default class Register extends Component{
         }
     }
 
-    verifyCallback(recaptchaToken) {
+    verifyCallback = (recaptchaToken) => {
         if (Boolean(recaptchaToken)){
             console.log('Captcha verified!')
             this.setState({ verified: true })
@@ -111,6 +111,7 @@ export default class Register extends Component{
     }
 
     onRegister = () => {
+        console.log(this.state)
         if (
             this.state.name === '' ||
             this.state.email === '' ||

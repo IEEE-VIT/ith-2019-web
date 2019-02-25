@@ -113,7 +113,7 @@ export default class Register extends Component{
 
         else{
             if (!this.state.verified){
-                alert('Please verify that you are a human. If you have alreafy verified, kindly refresh and try again.')
+                alert('Please verify that you are a human!')
             }
 
             else{
@@ -127,6 +127,7 @@ export default class Register extends Component{
                 })
                 .then(response => response.json())
                 .then(data => {
+                    console.log(data)
                     if(data.Status === 'Success'){
                         alert('Thank you! You have successfully registered!')
                     }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Register.css';
 import { form, FormGroup, Checkbox,ControlLabel, FormControl, Grid,Row,Col, Button } from 'react-bootstrap';
-import { ReCaptcha } from 'react-recaptcha-google';
+import Recaptcha from 'react-recaptcha';
 
 
 
@@ -32,27 +32,18 @@ export default class Register extends Component{
 
     }
 
-    componentDidMount() {
-        if (this.captchaDemo) {
-            console.log("started, just a second...")
-            this.captchaDemo.reset();
-            this.captchaDemo.execute();
-        }
-      }
 
-      onLoadRecaptcha() {
-        if (this.captchaDemo) {
-            this.captchaDemo.reset();
-            this.captchaDemo.execute();
-        }
-    }
-
-    verifyCallback = (recaptchaToken) => {
-        if (Boolean(recaptchaToken)){
+    callback = function () {
+        console.log('Done!!!!');
+      };
+       
+      // specifying verify callback function
+    verifyCallback = response => {
+        if (Boolean(response)){
             console.log('Captcha verified!')
-            this.setState({ verified: true })
+            this.setState({verified: true})
         }
-      }
+      };
 
     onNameChange = (event) => {
         this.setState({name: event.target.value})
@@ -281,14 +272,12 @@ export default class Register extends Component{
                                     <FormControl onChange={this.onQ5Change} placeholder='Eg: LinkedIn, GitHub, Twitter, Kaggle, HackerEarth' type="text" />                
                                 </FormGroup>
 
-                                <ReCaptcha
-                                    ref={(el) => {this.captchaDemo = el;}}
-                                    size="invisible"
-                                    render="explicit"
-                                    sitekey="6LeFLZMUAAAAACnCu8HpcLRDIXWy1KeIeOLrxhG-"
-                                    onloadCallback={this.onLoadRecaptcha}
-                                    verifyCallback={this.verifyCallback}
-                                />
+                                <Recaptcha
+                                sitekey="6LdcrJMUAAAAAJxU_9TzL0Umr2-_dFMMo_4b096Y"
+                                render="explicit"
+                                verifyCallback={this.verifyCallback}
+                                onloadCallback={this.callback}
+  />
 
                                 <Button onClick={this.onRegister}>{this.state.btn_text}</Button>
                             </form>

@@ -162,7 +162,6 @@ export default class Register extends Component{
                         alert('Oops! Something went wrong - ' + data.Message)
                     }
                     this.setState({btn_text: 'Register'})
-                    window.location.reload();
                 })
             }
         }

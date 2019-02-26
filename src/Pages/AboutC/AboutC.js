@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './AboutC.css';
 import {Grid,Row,Col} from 'react-bootstrap';
-import img1 from '../../graphics/2.png';
 import img2 from '../../graphics/3.png';
 import tl from '../../graphics/techloop.png';
 

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './Register.css';
-import { form, FormGroup, Checkbox,ControlLabel, FormControl, Grid,Row,Col, Button } from 'react-bootstrap';
+import { form, FormGroup, Checkbox,ControlLabel,Radio, FormControl, Grid,Row,Col, Button } from 'react-bootstrap';
 import Recaptcha from 'react-recaptcha';
+import logo from '../../graphics/itc_main.png';
 
 
 
@@ -12,20 +13,12 @@ export default class Register extends Component{
             name: '',
             email: '',
             mobile: '',
+            gender: '',
             external: false,
             university: '',
             regno: '',
-            city: '',
             ieee_member: false,
-            block: '',
-            room: '',
             ieee_id: '',
-            acc: false,
-            q1: '',
-            q2: '',
-            q3: '',
-            q4 : '',
-            q5: '',
             verified: false,
             btn_text: 'Register'
         }
@@ -65,10 +58,6 @@ export default class Register extends Component{
         this.setState({regno: event.target.value})
     }
 
-    onCityChange = (event) => {
-        this.setState({city: event.target.value})
-    }
-
     onBlockChange = (event) => {
         this.setState({block: event.target.value})
     }
@@ -81,25 +70,37 @@ export default class Register extends Component{
         this.setState({ieee_id: event.target.value})
     }
 
-    onQ1Change = (event) => {
-        this.setState({q1: event.target.value})
+    chooseMale = () => {
+        this.setState({gender: 'male'})
     }
 
-    onQ2Change = (event) => {
-        this.setState({q2: event.target.value})
+    chooseFemale = () => {
+        this.setState({gender: 'female'})
     }
 
-    onQ3Change = (event) => {
-        this.setState({q3: event.target.value})
+    chooseOthers = () => {
+        this.setState({gender: 'others'})
     }
 
-    onQ4Change = (event) => {
-        this.setState({q4: event.target.value})
-    }
+    // onQ1Change = (event) => {
+    //     this.setState({q1: event.target.value})
+    // }
 
-    onQ5Change = (event) => {
-        this.setState({q5: event.target.value})
-    }
+    // onQ2Change = (event) => {
+    //     this.setState({q2: event.target.value})
+    // }
+
+    // onQ3Change = (event) => {
+    //     this.setState({q3: event.target.value})
+    // }
+
+    // onQ4Change = (event) => {
+    //     this.setState({q4: event.target.value})
+    // }
+
+    // onQ5Change = (event) => {
+    //     this.setState({q5: event.target.value})
+    // }
 
     onRegister = () => {
         if (
@@ -149,10 +150,6 @@ export default class Register extends Component{
         this.setState({ieee_member: !this.state.ieee_member})
     }
 
-    accCheck = () => {
-        this.setState({acc: !this.state.acc})
-    }
-
     mobValidator(){
         var mob_test = /^[0][1-9]\d{9}$|^[1-9]\d{9}$/
         if (mob_test.test(this.state.mobile) || this.state.mobile === ''){
@@ -182,10 +179,11 @@ export default class Register extends Component{
         return(
             <div id='register'>
             <div id='reg-header'>
+                {/* <img src={logo}></img> */}
                 <h3>Register for IEEE Techloop Hack, 2019</h3><br/><br/><br/>
                 <h5>Enter your details</h5>
             </div>
-            <Grid>
+            <Grid id='form-layout'>
                 <Row>
                     <Col>
                         <div id='form-holder'>
@@ -203,11 +201,14 @@ export default class Register extends Component{
                                 </FormGroup>
 
                                 <FormGroup>
-                                    <FormControl onChange={this.onUniChange} placeholder='University / College Name' type="text" />                
+                                    <ControlLabel>Select your gender</ControlLabel><br/>
+                                    <Radio name="radioGroup" inline onClick={this.chooseMale}>Male</Radio>{' '}
+                                    <Radio name="radioGroup" inline onClick={this.chooseFemale}>Female</Radio>{' '}
+                                    <Radio name="radioGroup" inline onClick={this.chooseOthers}>Others</Radio>
                                 </FormGroup>
 
                                 <FormGroup>
-                                    <FormControl onChange={this.onCityChange} placeholder='City' type="text" />                
+                                    <FormControl onChange={this.onUniChange} placeholder='University / College Name' type="text" />                
                                 </FormGroup>
                                 
                                 <FormGroup>
@@ -217,21 +218,15 @@ export default class Register extends Component{
                                 </FormGroup>
 
                                 <FormGroup>
-                                    <Checkbox onClick={this.accCheck} readOnly>
-                                    Check this box if you require accomodation
-                                    </Checkbox>
-                                </FormGroup>
-
-                                <FormGroup>
                                     <FormControl disabled={this.state.external} onChange={this.onRegChange}  placeholder='Registration Number (Not for external students)' type="text" />                
                                 </FormGroup>
 
                                 <FormGroup>
-                                    <FormControl disabled={this.state.external} onChange={this.onBlockChange}  placeholder='Hostel Block' type="text" />                
+                                    {/* <FormControl disabled={this.state.external} onChange={this.onBlockChange}  placeholder='Hostel Block' type="text" />                
                                 </FormGroup>
 
                                 <FormGroup>
-                                    <FormControl disabled={this.state.external} onChange={this.onRoomChange}  placeholder='Room Number' type="text" />                
+                                    <FormControl disabled={this.state.external} onChange={this.onRoomChange}  placeholder='Room Number' type="text" />                 */}
                                 </FormGroup>
 
                                 <FormGroup>
@@ -245,7 +240,7 @@ export default class Register extends Component{
                                     <FormControl disabled={!this.state.ieee_member} onChange={this.onIMChange} placeholder='IEEE Membership ID' type="text" />                
                                 </FormGroup>
 
-                                <FormGroup>
+                                {/* <FormGroup>
                                     <ControlLabel>Why do you want to attend ITH?</ControlLabel>
                                     <FormControl onChange={this.onQ1Change} placeholder='Enter your answer' type="text" />                
                                 </FormGroup>
@@ -270,7 +265,7 @@ export default class Register extends Component{
                                 <FormGroup>
                                     <ControlLabel>Add links to your online profile<br/> (Optional)</ControlLabel>
                                     <FormControl onChange={this.onQ5Change} placeholder='Eg: LinkedIn, GitHub, Twitter, Kaggle, HackerEarth' type="text" />                
-                                </FormGroup>
+                                </FormGroup> */}
 
                                 <Recaptcha
                                 sitekey="6LdcrJMUAAAAAJxU_9TzL0Umr2-_dFMMo_4b096Y"

@@ -17,7 +17,7 @@ export default class Contact extends Component{
             var hand = document.getElementById('hand-holder');
             var winH = window.innerHeight;
             if (winH < 700) {
-                hand.style.transform = 'translate(0,'+(2600-wScroll*0.75)+'px)';
+                hand.style.transform = 'translate(0,'+(2700-wScroll*0.75)+'px)';
             }
 
             else {
@@ -43,17 +43,17 @@ export default class Contact extends Component{
                                 <h4>IEEE-VIT SB Chair</h4>
                                 <div className='info'>
                                     <h5>+91 76398 77709</h5>
-                                    <h5>biswas.neeladri@gmail.com</h5>
+                                    <h5>biswas.neeladri@ieee.org</h5>
                                 </div>
                             </div>
 
                             <div className='card'>
                                 <img src={druv} alt='vice chair'/>
-                                <h3>Dhruvang Wagh</h3>
+                                <h3>Druvang Wagh</h3>
                                 <h4>IEEE-VIT SB Vice Chair</h4>
                                 <div className='info'>
                                     <h5>+91 83690 91192</h5>
-                                    <h5>dhruvang.wagh@gmail.com</h5>
+                                    <h5>druvang_wagh@ieee.org</h5>
                                 </div>
                             </div>
                         </div>       

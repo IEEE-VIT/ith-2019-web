@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Highlights.css';
 import {Grid,Row,Col} from 'react-bootstrap';
-import conf from '../../graphics/conf.svg';
 import tl from '../../graphics/tl.svg';
 import hack from '../../graphics/hack.svg';
 

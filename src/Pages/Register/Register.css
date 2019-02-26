@@ -34,6 +34,10 @@
     color: #fff;
 }
 
+#reg-header>img{
+    width: 200px;
+}
+
 #register>h3{
     color: #fff;
 }
@@ -78,7 +82,11 @@
     color: #fff;
 }
 
-.container{
+.radio-inline{
+    color: #fff;
+}
+
+#form-layout{
     margin-right: 48px;
     margin-left: 48px;
 }

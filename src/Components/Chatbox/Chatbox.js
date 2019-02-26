@@ -19,7 +19,7 @@ export default class Chatbox extends Component{
         })
     }
     componentDidMount(){
-        addResponseMessage('Hello, there! You can ask me anything about ITC 2019.')
+        addResponseMessage('Hello, there! You can ask me anything about ITH 2019.')
     }
     render(){
         return(

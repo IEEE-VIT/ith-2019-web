@@ -89,7 +89,7 @@ export default class Register extends Component{
     }
 
     chooseOthers = () => {
-        this.setState({track: 'others'})
+        this.setState({gender: 'others'})
     }
 
     chooseML = () => {
@@ -101,7 +101,7 @@ export default class Register extends Component{
     }
 
     chooseUI = () => {
-        this.setState({gender: 'UIUX'})
+        this.setState({track: 'UIUX'})
     }
 
     // onQ1Change = (event) => {
@@ -145,6 +145,7 @@ export default class Register extends Component{
                 this.setState({btn_text: 'Please wait..'})
                 var req_body = this.state;
                 delete req_body.btn_text;
+                delete req_body.check_text;
                 fetch('https://ith2019-api.herokuapp.com/register',{
                     method: 'post',
                     headers: {'Content-type':'application/json'},

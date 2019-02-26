@@ -14,13 +14,15 @@ export default class Register extends Component{
             email: '',
             mobile: '',
             gender: '',
+            track: '',
             external: false,
-            university: '',
+            university: 'VIT, Vellore',
             regno: '',
             ieee_member: false,
             ieee_id: '',
             verified: false,
-            btn_text: 'Register'
+            btn_text: 'Register',
+            check_text: 'Registration Number'
         }
 
     }
@@ -55,7 +57,15 @@ export default class Register extends Component{
     }
 
     onRegChange = (event) => {
-        this.setState({regno: event.target.value})
+
+        if (!this.state.external){
+            
+            this.setState({regno: event.target.value})
+        }
+
+        else{
+            this.setState({university: event.target.value})
+        }
     }
 
     onBlockChange = (event) => {
@@ -79,7 +89,19 @@ export default class Register extends Component{
     }
 
     chooseOthers = () => {
-        this.setState({gender: 'others'})
+        this.setState({track: 'others'})
+    }
+
+    chooseML = () => {
+        this.setState({track: 'ML'})
+    }
+
+    chooseIoT = () => {
+        this.setState({track: 'IoT'})
+    }
+
+    chooseUI = () => {
+        this.setState({gender: 'UIUX'})
     }
 
     // onQ1Change = (event) => {
@@ -103,6 +125,7 @@ export default class Register extends Component{
     // }
 
     onRegister = () => {
+        console.log(this.state)
         if (
             this.state.name === '' ||
             this.state.email === '' ||
@@ -115,6 +138,7 @@ export default class Register extends Component{
         else{
             if (!this.state.verified){
                 alert('Please verify that you are a human!')
+                
             }
 
             else{
@@ -130,7 +154,8 @@ export default class Register extends Component{
                 .then(data => {
                     console.log(data)
                     if(data.Status === 'Success'){
-                        alert('Thank you! You have successfully registered!')
+                        alert('Thank you! You have successfully registered! Press OK to proceed to the payment portal')
+                        window.location.href = 'http://info.vit.ac.in/Events-VIT/TechloopHack/apply.asp'
                     }
                     else{
                         alert('Oops! Something went wrong - ' + data.Message)
@@ -143,7 +168,15 @@ export default class Register extends Component{
     }
 
     extCheck = () => {
-        this.setState({external: !this.state.external})
+        document.getElementById('x').value = ''
+        this.setState({external: !this.state.external}, () => {
+            if (!this.state.external){
+                this.setState({check_text: 'Registration Number',university:'VIT, Vellore'})
+            }
+            else {
+                this.setState({check_text: 'University',university:'',regno:''})
+            }
+        })
     }
 
     ieeeCheck = () => {
@@ -208,26 +241,35 @@ export default class Register extends Component{
                                 </FormGroup>
 
                                 <FormGroup>
-                                    <FormControl onChange={this.onUniChange} placeholder='University / College Name' type="text" />                
+                                    <ControlLabel>Select your Techloop track</ControlLabel><br/>
+                                    <Radio name="track" inline onClick={this.chooseML}>ML</Radio>{' '}
+                                    <Radio name="track" inline onClick={this.chooseIoT}>IoT</Radio>{' '}
+                                    <Radio name="track" inline onClick={this.chooseUI}>UI/UX</Radio>
                                 </FormGroup>
+
+                                {/* <FormGroup>
+                                    <FormControl onChange={this.onUniChange} placeholder='University / College Name' type="text" />                
+                                </FormGroup> */}
                                 
                                 <FormGroup>
-                                    <Checkbox onClick={this.extCheck} readOnly>
-                                    Check this box if you are an External Student
+                                    <Checkbox checked={!this.state.external} onClick={this.extCheck}>
+                                    I am a VITian
                                     </Checkbox>
                                 </FormGroup>
 
                                 <FormGroup>
-                                    <FormControl disabled={this.state.external} onChange={this.onRegChange}  placeholder='Registration Number (Not for external students)' type="text" />                
+                                    <FormControl id='x' onChange={this.onRegChange}  placeholder={this.state.check_text} type="text" />                
+                                </FormGroup>
+
+                                {/* <FormGroup>
+                                    <FormControl disabled={this.state.external} onChange={this.onBlockChange}  placeholder='Hostel Block' type="text" />                
                                 </FormGroup>
 
                                 <FormGroup>
-                                    {/* <FormControl disabled={this.state.external} onChange={this.onBlockChange}  placeholder='Hostel Block' type="text" />                
-                                </FormGroup>
+                                    <FormControl disabled={this.state.external} onChange={this.onRoomChange}  placeholder='Room Number' type="text" />                
+                                </FormGroup> */}
 
-                                <FormGroup>
-                                    <FormControl disabled={this.state.external} onChange={this.onRoomChange}  placeholder='Room Number' type="text" />                 */}
-                                </FormGroup>
+
 
                                 <FormGroup>
                                     <Checkbox onClick={this.ieeeCheck} readOnly>

@@ -154,7 +154,7 @@ export default class Register extends Component{
                     console.log(data)
                     if(data.Status === 'Success'){
                         alert('Thank you! You have successfully registered! Press OK to proceed to the payment portal')
-                        console.log(link)
+                        window.location.href = link;
                     }
                     else{
                         alert('Oops! Something went wrong - ' + data.Message)

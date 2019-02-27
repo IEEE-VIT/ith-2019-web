@@ -116,6 +116,7 @@ export default class Register extends Component{
 
 
     onRegister = () => {
+
         if (
             this.state.name === '' ||
             this.state.email === '' ||
@@ -150,6 +151,7 @@ export default class Register extends Component{
                 .then(data => {
                     console.log(data)
                     if(data.Status === 'Success'){
+                        console.log('Redirecting to : ', this.state.link)
                         alert('Thank you! You have successfully registered! Press OK to proceed to the payment portal')
                         window.open(this.state.link)
                     }

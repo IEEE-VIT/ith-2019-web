@@ -15,6 +15,7 @@ export default class Register extends Component{
             mobile: '',
             gender: '',
             track: '',
+            combo: '',
             external: false,
             university: 'VIT, Vellore',
             regno: '',
@@ -22,7 +23,8 @@ export default class Register extends Component{
             ieee_id: '',
             verified: false,
             btn_text: 'Register',
-            check_text: 'Registration Number'
+            check_text: 'Registration Number',
+            link: ''
         }
 
     }
@@ -104,25 +106,14 @@ export default class Register extends Component{
         this.setState({track: 'UIUX'})
     }
 
-    // onQ1Change = (event) => {
-    //     this.setState({q1: event.target.value})
-    // }
+    chooseCombo1 = () => {
+        this.setState({combo: 'TLH',track: '',link:'http://info.vit.ac.in/Events-VIT/TechloopHack/apply.asp'})
+    }
 
-    // onQ2Change = (event) => {
-    //     this.setState({q2: event.target.value})
-    // }
+    chooseCombo2 = () => {
+        this.setState({combo: 'H',track: 'NA',link: 'http://info.vit.ac.in/Events-VIT/TechloopHack/apply2.asp'})
+    }
 
-    // onQ3Change = (event) => {
-    //     this.setState({q3: event.target.value})
-    // }
-
-    // onQ4Change = (event) => {
-    //     this.setState({q4: event.target.value})
-    // }
-
-    // onQ5Change = (event) => {
-    //     this.setState({q5: event.target.value})
-    // }
 
     onRegister = () => {
         console.log(this.state)
@@ -133,6 +124,10 @@ export default class Register extends Component{
             this.state.university === '' 
         ){
             alert('Please fill in the required fields')
+        }
+
+        if ((!this.state.external && this.state.combo === '') || (!this.state.external && this.state.combo === 'TLH' && this.state.track === '')){
+            alert('Please select your combo (and track)')
         }
 
         else{
@@ -146,6 +141,7 @@ export default class Register extends Component{
                 var req_body = this.state;
                 delete req_body.btn_text;
                 delete req_body.check_text;
+                delete req_body.link;
                 fetch('https://ith2019-api.herokuapp.com/register',{
                     method: 'post',
                     headers: {'Content-type':'application/json'},
@@ -156,7 +152,7 @@ export default class Register extends Component{
                     console.log(data)
                     if(data.Status === 'Success'){
                         alert('Thank you! You have successfully registered! Press OK to proceed to the payment portal')
-                        window.location.href = 'http://info.vit.ac.in/Events-VIT/TechloopHack/apply.asp'
+                        window.location.href = this.state.link
                     }
                     else{
                         alert('Oops! Something went wrong - ' + data.Message)
@@ -170,11 +166,11 @@ export default class Register extends Component{
     extCheck = () => {
         document.getElementById('x').value = ''
         this.setState({external: !this.state.external}, () => {
-            if (!this.state.external){
+            if (!this.state.external){ //Internal
                 this.setState({check_text: 'Registration Number',university:'VIT, Vellore'})
             }
-            else {
-                this.setState({check_text: 'University',university:'',regno:''})
+            else { //External
+                this.setState({check_text: 'University',university:'',regno:'',combo:'TLH',link: 'http://info.vit.ac.in/Events-VIT/TechloopHack/apply.asp'})
             }
         })
     }
@@ -240,7 +236,23 @@ export default class Register extends Component{
                                     <Radio name="radioGroup" inline onClick={this.chooseOthers}>Others</Radio>
                                 </FormGroup>
 
+                                <FormGroup style={{"marginBottom":"16px"}}>
+                                    <Checkbox checked={!this.state.external} onClick={this.extCheck}>
+                                    I am a VITian
+                                    </Checkbox>
+                                </FormGroup>
+
                                 <FormGroup>
+                                    <FormControl id='x' onChange={this.onRegChange}  placeholder={this.state.check_text} type="text" />                
+                                </FormGroup>
+
+                                <FormGroup hidden={this.state.external}>
+                                    <ControlLabel>Select your combo</ControlLabel><br/>
+                                    <Radio name="combo" inline onClick={this.chooseCombo1}>Techloop + Hack</Radio>{' '}
+                                    <Radio name="combo" inline onClick={this.chooseCombo2}>Only Hack</Radio>{' '}
+                                </FormGroup>
+
+                                <FormGroup hidden={this.state.combo === 'H' || this.state.combo === ''}>
                                     <ControlLabel>Select your Techloop track</ControlLabel><br/>
                                     <Radio name="track" inline onClick={this.chooseML}>ML</Radio>{' '}
                                     <Radio name="track" inline onClick={this.chooseIoT}>IoT</Radio>{' '}
@@ -250,16 +262,7 @@ export default class Register extends Component{
                                 {/* <FormGroup>
                                     <FormControl onChange={this.onUniChange} placeholder='University / College Name' type="text" />                
                                 </FormGroup> */}
-                                
-                                <FormGroup>
-                                    <Checkbox checked={!this.state.external} onClick={this.extCheck}>
-                                    I am a VITian
-                                    </Checkbox>
-                                </FormGroup>
-
-                                <FormGroup>
-                                    <FormControl id='x' onChange={this.onRegChange}  placeholder={this.state.check_text} type="text" />                
-                                </FormGroup>
+                            
 
                                 {/* <FormGroup>
                                     <FormControl disabled={this.state.external} onChange={this.onBlockChange}  placeholder='Hostel Block' type="text" />                

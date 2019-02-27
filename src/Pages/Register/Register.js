@@ -116,7 +116,6 @@ export default class Register extends Component{
 
 
     onRegister = () => {
-        console.log(this.state)
         if (
             this.state.name === '' ||
             this.state.email === '' ||

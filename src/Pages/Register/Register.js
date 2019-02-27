@@ -141,9 +141,9 @@ export default class Register extends Component{
                 var req_body = this.state;
                 delete req_body.btn_text;
                 delete req_body.check_text;
+                delete req_body.link;
 
                 var link = req.body.link;
-                delete req_body.link;
                 fetch('https://ith2019-api.herokuapp.com/register',{
                     method: 'post',
                     headers: {'Content-type':'application/json'},
@@ -154,7 +154,7 @@ export default class Register extends Component{
                     console.log(data)
                     if(data.Status === 'Success'){
                         alert('Thank you! You have successfully registered! Press OK to proceed to the payment portal')
-                        window.open(link)
+                        console.log(this.state.link)
                     }
                     else{
                         alert('Oops! Something went wrong - ' + data.Message)

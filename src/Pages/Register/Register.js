@@ -155,7 +155,10 @@ export default class Register extends Component{
                     if(data.Status === 'Success'){
                         console.log(this.state.link)
                         document.getElementById('mod').display="block";
-                        window.location.href = link;
+                        setInterval(function(){ 
+                            window.location.href = link;
+
+                        }, 3000);
                     }
                     else{
                         alert('Oops! Something went wrong - ' + data.Message)

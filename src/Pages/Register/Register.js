@@ -116,7 +116,7 @@ export default class Register extends Component{
 
 
     onRegister = () => {
-
+        
         if (
             this.state.name === '' ||
             this.state.email === '' ||
@@ -154,7 +154,7 @@ export default class Register extends Component{
                     console.log(data)
                     if(data.Status === 'Success'){
                         console.log(this.state.link)
-                        document.getElementById('mod').display="block";
+                        document.getElementById('mod').style.display = "block";
                         setInterval(function(){ 
                             window.location.href = link;
 

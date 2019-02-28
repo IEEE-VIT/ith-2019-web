@@ -34,6 +34,26 @@
     color: #fff;
 }
 
+.modal{
+    background-color: rgba(0,0,0,0.8)
+}
+.modal-header,.modal-footer{
+    border: none;
+}
+
+.modal-footer .btn{
+    margin: 0;
+}
+
+.modal-footer .btn:hover{
+    color: black;
+    border-color: black;
+
+}
+.modal-title{
+    border: none;
+}
+
 #reg-header>img{
     width: 200px;
 }

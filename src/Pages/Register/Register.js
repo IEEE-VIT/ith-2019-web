@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Register.css';
-import { form, FormGroup, Checkbox,ControlLabel,Radio, FormControl, Grid,Row,Col, Button } from 'react-bootstrap';
+import { form, FormGroup, Checkbox,ControlLabel,Radio, FormControl, Grid,Row,Col, Button, Modal } from 'react-bootstrap';
 import Recaptcha from 'react-recaptcha';
 import logo from '../../graphics/itc_main.png';
 
@@ -153,7 +153,8 @@ export default class Register extends Component{
                 .then(data => {
                     console.log(data)
                     if(data.Status === 'Success'){
-                        alert('Thank you! You have successfully registered! Press OK to proceed to the payment portal')
+                        console.log(this.state.link)
+                        document.getElementById('mod').display="block";
                         window.location.href = link;
                     }
                     else{
@@ -261,21 +262,6 @@ export default class Register extends Component{
                                     <Radio name="track" inline onClick={this.chooseUI}>UI/UX</Radio>
                                 </FormGroup>
 
-                                {/* <FormGroup>
-                                    <FormControl onChange={this.onUniChange} placeholder='University / College Name' type="text" />                
-                                </FormGroup> */}
-                            
-
-                                {/* <FormGroup>
-                                    <FormControl disabled={this.state.external} onChange={this.onBlockChange}  placeholder='Hostel Block' type="text" />                
-                                </FormGroup>
-
-                                <FormGroup>
-                                    <FormControl disabled={this.state.external} onChange={this.onRoomChange}  placeholder='Room Number' type="text" />                
-                                </FormGroup> */}
-
-
-
                                 <FormGroup>
                                     <Checkbox onClick={this.ieeeCheck} readOnly>
                                     Check this box if you are an IEEE Member
@@ -286,33 +272,6 @@ export default class Register extends Component{
                                 <FormGroup>
                                     <FormControl disabled={!this.state.ieee_member} onChange={this.onIMChange} placeholder='IEEE Membership ID' type="text" />                
                                 </FormGroup>
-
-                                {/* <FormGroup>
-                                    <ControlLabel>Why do you want to attend ITH?</ControlLabel>
-                                    <FormControl onChange={this.onQ1Change} placeholder='Enter your answer' type="text" />                
-                                </FormGroup>
-
-                                <FormGroup>
-                                    <ControlLabel>Have you attended hack-a-thons before?<br/> If yes, list them.</ControlLabel>
-                                    <FormControl onChange={this.onQ2Change} placeholder='Enter your answer' type="text" />                
-                                </FormGroup>
-
-                                <FormGroup>
-                                    <ControlLabel>Kindly share details of your previous projects<br/> (if any).</ControlLabel>
-                                    <FormControl onChange={this.onQ3Change} placeholder='Enter your answer' type="text" />                
-                                </FormGroup>
-
-
-                                <FormGroup>
-                                    <ControlLabel>How did you come to know about us?<br/></ControlLabel>
-                                    <FormControl onChange={this.onQ4Change} placeholder='Enter your answer' type="text" />                
-                                </FormGroup>
-
-
-                                <FormGroup>
-                                    <ControlLabel>Add links to your online profile<br/> (Optional)</ControlLabel>
-                                    <FormControl onChange={this.onQ5Change} placeholder='Eg: LinkedIn, GitHub, Twitter, Kaggle, HackerEarth' type="text" />                
-                                </FormGroup> */}
 
                                 <Recaptcha
                                 sitekey="6LdcrJMUAAAAAJxU_9TzL0Umr2-_dFMMo_4b096Y"
@@ -327,6 +286,26 @@ export default class Register extends Component{
                     </Col>
                 </Row>
             </Grid>
+            <div id='mod' style={{"display":"none"}} className="static-modal">
+                <Modal.Dialog>
+                    <Modal.Header>
+                        <Modal.Title>Congratulations!</Modal.Title>
+                    </Modal.Header>
+
+                    <Modal.Body>
+                            You have successfully registered for ITH 2019.<br/>
+                            You will be redirected to the payment portal shortly.
+
+                            <br/><br/><br/>
+                            Click <a href={this.state.link}>here</a> if you are not redirected within 5 seconds..
+
+                    </Modal.Body>
+
+                    <Modal.Footer>
+                        <Button>Close</Button>
+                    </Modal.Footer>
+                </Modal.Dialog>
+                </div>
             </div>
         );
     }

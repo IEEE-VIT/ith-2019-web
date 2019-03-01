@@ -17,11 +17,11 @@ export default class Contact extends Component{
             var hand = document.getElementById('hand-holder');
             var winH = window.innerHeight;
             if (winH < 700) {
-                hand.style.transform = 'translate(0,'+(2700-wScroll*0.75)+'px)';
+                hand.style.transform = 'translate(0,'+(3600-wScroll*0.75)+'px)';
             }
 
             else {
-                hand.style.transform = 'translate(0,'+(3100-wScroll*0.75)+'px)';
+                hand.style.transform = 'translate(0,'+(3900-wScroll*0.75)+'px)';
             }
         }, { passive: true })
     }

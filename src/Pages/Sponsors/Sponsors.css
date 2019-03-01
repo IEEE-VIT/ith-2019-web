@@ -1,0 +1,63 @@
+#sponsors{
+    padding: 18px;
+    padding-top: 36px;
+    background-image: url('../../graphics/pinkbg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+#sponsor-holder{
+    padding-top: 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+     
+}
+
+#sponsors h4{
+    color: #fff;
+    margin: 12px !important;
+    border: none;
+}
+
+.sponsor-card{
+    display: inline-block;
+    margin: 18px;
+}
+
+.tile{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 185px;
+    width: 185px;
+    border-radius: 50%;
+}
+.tile img{
+    width: 120px;
+    height: auto;
+}
+
+.sponsor-card p{
+    color: #fff;
+    font-weight: bolder;
+    margin-top: 24px;
+    font-size: 18px;
+}
+
+.tile:hover{
+    box-shadow: 2px 2px 8px #fff;
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    #sponsor-holder{
+        width: 60%;
+    }
+ }

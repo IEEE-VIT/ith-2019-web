@@ -6,7 +6,7 @@ import Highlights from './Pages/Highlights/Highlights';
 import AboutI from './Pages/AboutIEEE/AboutI';
 import Contact from './Pages/Contact/Contact';
 import Chatbox from './Components/Chatbox/Chatbox';
-
+import Sponsors from './Pages/Sponsors/Sponsors';
 export default class LandingPage extends Component {
     render() {
       return (
@@ -15,6 +15,7 @@ export default class LandingPage extends Component {
           <Navigation/>
           <Header/>
           <AboutC/>
+          <Sponsors/>
           <Highlights/>
           <AboutI/>
           <Contact/>

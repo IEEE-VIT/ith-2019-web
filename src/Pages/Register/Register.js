@@ -142,7 +142,6 @@ export default class Register extends Component{
                 var link = this.state.link;
                 delete req_body.btn_text;
                 delete req_body.check_text;
-                delete req_body.link;
 
                 fetch('https://ith2019-api.herokuapp.com/register',{
                     method: 'post',

@@ -22,9 +22,10 @@ export default class Register extends Component{
             ieee_member: false,
             ieee_id: '',
             verified: false,
-            btn_text: 'Register',
+            btn_text: 'Proceed to Payment',
             check_text: 'Registration Number',
-            link: ''
+            link: '',
+            bill: 0,
         }
 
     }
@@ -107,11 +108,11 @@ export default class Register extends Component{
     }
 
     chooseCombo1 = () => {
-        this.setState({combo: 'TLH',track: '',link:'http://info.vit.ac.in/Events-VIT/TechloopHack/apply.asp'})
+        this.setState({ieee_member: false,combo: 'TLH',track: '',link:'http://info.vit.ac.in/Events-VIT/TechloopHack/apply.asp', bill: 499})
     }
 
     chooseCombo2 = () => {
-        this.setState({combo: 'H',track: 'NA',link: 'http://info.vit.ac.in/Events-VIT/TechloopHack/apply2.asp'})
+        this.setState({ieee_member: false,combo: 'H',track: 'NA',link: 'http://info.vit.ac.in/Events-VIT/TechloopHack/apply2.asp', bill: 299})
     }
 
 
@@ -157,12 +158,12 @@ export default class Register extends Component{
                         setInterval(function(){ 
                             window.location.href = link;
 
-                        }, 3000);
+                        }, 8000);
                     }
                     else{
                         alert('Oops! Something went wrong - ' + data.Message)
                     }
-                    this.setState({btn_text: 'Register'})
+                    this.setState({btn_text: 'Proceed to Payment'})
                 })
             }
         }
@@ -175,13 +176,21 @@ export default class Register extends Component{
                 this.setState({check_text: 'Registration Number',university:'VIT, Vellore'})
             }
             else { //External
-                this.setState({check_text: 'University',university:'',regno:'',combo:'TLH',link: 'http://info.vit.ac.in/Events-VIT/TechloopHack/apply.asp'})
+                this.setState({check_text: 'University',university:'',regno:'',combo:'TLH',link: 'http://info.vit.ac.in/Events-VIT/TechloopHack/apply.asp',bill: 499})
             }
         })
     }
 
     ieeeCheck = () => {
-        this.setState({ieee_member: !this.state.ieee_member})
+        this.setState({ieee_member: !this.state.ieee_member},() => {
+            if (this.state.ieee_member){
+                this.setState({bill: this.state.bill - 100})
+            }
+            else{
+
+                this.setState({bill: this.state.bill + 100})
+            }
+        } )
     }
 
     mobValidator(){
@@ -264,24 +273,26 @@ export default class Register extends Component{
                                     <Radio name="track" inline onClick={this.chooseUI}>UI/UX</Radio>
                                 </FormGroup>
 
-                                <FormGroup>
-                                    <Checkbox onClick={this.ieeeCheck} readOnly>
+                                <FormGroup style={{"marginBottom": "0px"}}>
+                                    <Checkbox checked={this.state.ieee_member} onClick={this.ieeeCheck} readOnly>
                                     Check this box if you are an IEEE Member
                                     </Checkbox>
                                 </FormGroup>
-                            
 
                                 <FormGroup>
                                     <FormControl disabled={!this.state.ieee_member} onChange={this.onIMChange} placeholder='IEEE Membership ID' type="text" />                
                                 </FormGroup>
+                                
 
+
+                                
                                 <Recaptcha
                                 sitekey="6LdcrJMUAAAAAJxU_9TzL0Umr2-_dFMMo_4b096Y"
                                 render="explicit"
                                 verifyCallback={this.verifyCallback}
                                 onloadCallback={this.callback}
-  />
-
+                                /><br/><br/>
+                                <p id='bill-status'>Registration Fees : <strong> Rs. {this.state.bill} </strong></p><br/>
                                 <Button onClick={this.onRegister}>{this.state.btn_text}</Button>
                             </form>
                         </div>

@@ -253,7 +253,7 @@ export default class Register extends Component{
 
                                 <FormGroup style={{"marginBottom":"16px"}}>
                                     <Checkbox checked={!this.state.external} onClick={this.extCheck}>
-                                    I am a VITian
+                                    I am a VITian (Vellore Campus only)
                                     </Checkbox>
                                 </FormGroup>
 

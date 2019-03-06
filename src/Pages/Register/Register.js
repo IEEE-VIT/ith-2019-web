@@ -25,7 +25,7 @@ export default class Register extends Component{
             regno: '',
             ieee_member: false,
             ieee_id: '',
-            verified: true,
+            verified: false,
             btn_text: 'Proceed to Payment',
             check_text: 'Registration Number',
             bill: 0,

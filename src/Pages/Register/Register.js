@@ -3,6 +3,8 @@ import './Register.css';
 import { form, FormGroup, Checkbox,ControlLabel,Radio, FormControl, Grid,Row,Col, Button, Modal } from 'react-bootstrap';
 import Recaptcha from 'react-recaptcha';
 import logo from '../../graphics/itc_main.png';
+import $ from 'jquery'; 
+
 
 var rn = require('random-number');
 
@@ -162,10 +164,16 @@ export default class Register extends Component{
                     .then(data => {
                         console.log(data)
                         if(data.Status === 'Success'){
-                            document.getElementById('mod').style.display = "block";
-                            setInterval(function(){ 
-                                console.log('sup')
-                            }, 8000);
+                            // document.getElementById('mod').style.display = "block";
+                                fetch('https://ithregistration2019.herokuapp.com/payment',{
+                                    method: 'post',
+                                    headers: {'Content-type':'application/json'},
+                                    body: JSON.stringify(req_body)
+                                })
+                                .then(response => response.text())
+                                .then(data => {
+                                    $( "html" ).html( data );
+                                })
                         }
                         else{
                             alert('Oops! Something went wrong - ' + data.Message)

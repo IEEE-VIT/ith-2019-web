@@ -193,7 +193,7 @@ export default class Register extends Component{
                 this.setState({check_text: 'Registration Number',university:'VIT, Vellore'})
             }
             else { //External
-                this.setState({check_text: 'University',university:'',regno:'',combo:'TLH',link: 'http://info.vit.ac.in/Events-VIT/TechloopHack/apply.asp',bill: 499})
+                this.setState({check_text: 'University',university:'',regno:'',combo:'TLH',bill: 499})
             }
         })
     }

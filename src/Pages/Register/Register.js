@@ -145,7 +145,7 @@ export default class Register extends Component{
                 delete req_body.check_text;
                 delete req_body.bill;
 
-                fetch('https://ith2019-api.herokuapp.com/register',{
+                fetch('https://ithregistration2019.herokuapp.com/register',{
                     method: 'post',
                     headers: {'Content-type':'application/json'},
                     body: JSON.stringify(req_body)

@@ -183,15 +183,17 @@ export default class Register extends Component{
     }
 
     ieeeCheck = () => {
-        this.setState({ieee_member: !this.state.ieee_member},() => {
-            if (this.state.ieee_member){
-                this.setState({bill: this.state.bill - 100})
-            }
-            else{
-
-                this.setState({bill: this.state.bill + 100})
-            }
-        } )
+        if (this.state.combo !== ''){
+            this.setState({ieee_member: !this.state.ieee_member},() => {
+                if (this.state.ieee_member){
+                    this.setState({bill: this.state.bill - 100})
+                }
+                else{
+    
+                    this.setState({bill: this.state.bill + 100})
+                }
+            } )
+        }
     }
 
     mobValidator(){

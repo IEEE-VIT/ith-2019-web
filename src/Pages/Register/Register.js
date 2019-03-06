@@ -194,6 +194,9 @@ export default class Register extends Component{
                 }
             } )
         }
+        else {
+            alert('First select your combo!')
+        }
     }
 
     mobValidator(){

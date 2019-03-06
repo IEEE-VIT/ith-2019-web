@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "nodemon": "^1.18.10",
+    "random-number": "0.0.9",
     "react": "^16.7.0",
     "react-bootstrap": "^0.32.4",
     "react-chat-widget": "^2.1.4-1",

@@ -4,6 +4,8 @@ import { form, FormGroup, Checkbox,ControlLabel,Radio, FormControl, Grid,Row,Col
 import Recaptcha from 'react-recaptcha';
 import logo from '../../graphics/itc_main.png';
 
+var rn = require('random-number');
+
 
 
 export default class Register extends Component{
@@ -21,11 +23,13 @@ export default class Register extends Component{
             regno: '',
             ieee_member: false,
             ieee_id: '',
-            verified: false,
+            verified: true,
             btn_text: 'Proceed to Payment',
             check_text: 'Registration Number',
-            link: '',
             bill: 0,
+            payment_status : 'no',
+            id_trans: 0,
+            TimeStamp: ''
         }
 
     }
@@ -108,11 +112,11 @@ export default class Register extends Component{
     }
 
     chooseCombo1 = () => {
-        this.setState({ieee_member: false,combo: 'TLH',track: '',link:'http://info.vit.ac.in/Events-VIT/TechloopHack/apply.asp', bill: 499})
+        this.setState({ieee_member: false,combo: 'TLH',track: '', bill: 499})
     }
 
     chooseCombo2 = () => {
-        this.setState({ieee_member: false,combo: 'H',track: 'NA',link: 'http://info.vit.ac.in/Events-VIT/TechloopHack/apply2.asp', bill: 299})
+        this.setState({ieee_member: false,combo: 'H',track: 'NA',bill: 299})
     }
 
 
@@ -138,33 +142,37 @@ export default class Register extends Component{
             }
 
             else{
-                this.setState({btn_text: 'Please wait..'})
-                var req_body = this.state;
-                var link = this.state.link;
-                delete req_body.btn_text;
-                delete req_body.check_text;
-                delete req_body.bill;
-
-                fetch('https://ithregistration2019.herokuapp.com/register',{
-                    method: 'post',
-                    headers: {'Content-type':'application/json'},
-                    body: JSON.stringify(req_body)
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data)
-                    if(data.Status === 'Success'){
-                        console.log(this.state.link)
-                        document.getElementById('mod').style.display = "block";
-                        setInterval(function(){ 
-                            window.location.href = link;
-
-                        }, 8000);
+                this.setState({btn_text: 'Please wait..',id_trans: 'IETE'+rn(
+                    {
+                        min: 100000,
+                        max: 999999,
+                        integer: true
                     }
-                    else{
-                        alert('Oops! Something went wrong - ' + data.Message)
-                    }
-                    this.setState({btn_text: 'Proceed to Payment'})
+                ), TimeStamp: Date()}, () => {
+                    var req_body = this.state;
+                    delete req_body.btn_text;
+                    delete req_body.check_text;
+                    console.log(this.state)
+                    fetch('https://ithregistration2019.herokuapp.com/register',{
+                        method: 'post',
+                        headers: {'Content-type':'application/json'},
+                        body: JSON.stringify(req_body)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data)
+                        if(data.Status === 'Success'){
+                            document.getElementById('mod').style.display = "block";
+                            setInterval(function(){ 
+                                console.log('sup')
+                            }, 8000);
+                        }
+                        else{
+                            alert('Oops! Something went wrong - ' + data.Message)
+                        }
+                        this.setState({btn_text: 'Proceed to Payment'})
+                    })
+
                 })
             }
         }
@@ -223,6 +231,7 @@ export default class Register extends Component{
             return 'error'
         }
     }
+
     
     render(){
         return(

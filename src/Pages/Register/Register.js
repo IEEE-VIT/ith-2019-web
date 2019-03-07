@@ -164,7 +164,6 @@ export default class Register extends Component{
                     .then(data => {
                         console.log(data)
                         if(data.Status === 'Success'){
-                            // document.getElementById('mod').style.display = "block";
                                 fetch('https://ithregistration2019.herokuapp.com/payment',{
                                     method: 'post',
                                     headers: {'Content-type':'application/json'},
@@ -172,7 +171,10 @@ export default class Register extends Component{
                                 })
                                 .then(response => response.text())
                                 .then(data => {
-                                    $( "html" ).html( data );
+                                    var x=window.open();    
+                                    x.document.open();
+                                    x.document.write(data);
+                                    x.document.close();
                                 })
                         }
                         else{
@@ -322,26 +324,6 @@ export default class Register extends Component{
                     </Col>
                 </Row>
             </Grid>
-            <div id='mod' style={{"display":"none"}} className="static-modal">
-                <Modal.Dialog>
-                    <Modal.Header>
-                        <Modal.Title>Congratulations!</Modal.Title>
-                    </Modal.Header>
-
-                    <Modal.Body>
-                            You have successfully registered for ITH 2019.<br/>
-                            You will be redirected to the payment portal shortly.
-
-                            <br/><br/><br/>
-                            Click <a href={this.state.link}>here</a> if you are not redirected within 5 seconds..
-
-                    </Modal.Body>
-
-                    <Modal.Footer>
-                        <Button>Close</Button>
-                    </Modal.Footer>
-                </Modal.Dialog>
-                </div>
             </div>
         );
     }

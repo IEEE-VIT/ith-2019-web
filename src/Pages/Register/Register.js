@@ -319,12 +319,6 @@ export default class Register extends Component{
                                 /><br/><br/>
                                 <p id='bill-status'>Registration Fees : <strong> Rs. {this.state.bill} </strong></p><br/>
                                 <Button onClick={this.onRegister}>{this.state.btn_text}</Button>
-                                <p
-                                    style={{
-                                        "fontWeight": "bold",
-                                        "fontSize":"10px"
-                                    }}
-                                >On clicking, you will be redirected to a secure payment gateway</p>
                             </form>
                         </div>
                     </Col>

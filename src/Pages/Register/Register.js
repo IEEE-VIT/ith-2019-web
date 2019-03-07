@@ -171,10 +171,10 @@ export default class Register extends Component{
                                 })
                                 .then(response => response.text())
                                 .then(data => {
-                                    var x=window.open();    
-                                    x.document.open();
-                                    x.document.write(data);
-                                    x.document.close();
+                                     
+                                    document.open();
+                                    document.write(data);
+                                    document.close();
                                 })
                         }
                         else{
@@ -307,10 +307,6 @@ export default class Register extends Component{
                                 <FormGroup>
                                     <FormControl disabled={!this.state.ieee_member} onChange={this.onIMChange} placeholder='IEEE Membership ID' type="text" />                
                                 </FormGroup>
-                                
-
-
-                                
                                 <Recaptcha
                                 sitekey="6LdcrJMUAAAAAJxU_9TzL0Umr2-_dFMMo_4b096Y"
                                 render="explicit"
@@ -319,6 +315,13 @@ export default class Register extends Component{
                                 /><br/><br/>
                                 <p id='bill-status'>Registration Fees : <strong> Rs. {this.state.bill} </strong></p><br/>
                                 <Button onClick={this.onRegister}>{this.state.btn_text}</Button>
+                                <p
+                                    style={{
+                                        "color":"#fff",
+                                        "fontWeight":"bold",
+                                        "fontSize":"12px"
+                                    }}
+                                >On clicking, you will be redirected to a secure payment gateway</p><br/><br/>
                             </form>
                         </div>
                     </Col>

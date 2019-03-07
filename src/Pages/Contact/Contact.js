@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './Contact.css';
 import {Grid,Row,Col} from 'react-bootstrap';
 import hand from '../../graphics/contact.svg';
-import druv from '../../graphics/druvang.jpeg';
-import neel from '../../graphics/Neel.jpeg';
+import ash from '../../graphics/ashwin.jpeg';
+import heet from '../../graphics/heet.jpeg';
 import ieee from '../../graphics/ieee_logo.png';
 import fb from '../../graphics/facebook.svg';
 import ig from '../../graphics/ig.svg';
@@ -38,22 +38,22 @@ export default class Contact extends Component{
                         <h4>Contact Us</h4>
                         <div className='card-list'>
                             <div className='card'>
-                                <img src={neel} alt='chair'/>
-                                <h3>Neeladri Biswas</h3>
-                                <h4>IEEE-VIT SB Chair</h4>
+                                <img src={heet} alt='chair'/>
+                                <h3>Heetarthi Kamdar</h3>
+                                <h5>Core Commitee Member</h5>
                                 <div className='info'>
-                                    <h5>+91 76398 77709</h5>
-                                    <h5>biswas.neeladri@ieee.org</h5>
+                                    <h5>+91 79774 13685</h5>
+                                    <h5>heetarthikamdar@gmail.com</h5>
                                 </div>
                             </div>
 
                             <div className='card'>
-                                <img src={druv} alt='vice chair'/>
-                                <h3>Druvang Wagh</h3>
-                                <h4>IEEE-VIT SB Vice Chair</h4>
+                                <img src={ash} alt='vice chair'/>
+                                <h3>Ashwin Goel</h3>
+                                <h5>Core Commitee Member</h5>
                                 <div className='info'>
-                                    <h5>+91 83690 91192</h5>
-                                    <h5>druvang_wagh@ieee.org</h5>
+                                    <h5>+91 91597 33622</h5>
+                                    <h5>goelashwin36@gmail.com</h5>
                                 </div>
                             </div>
                         </div>       

@@ -5,7 +5,8 @@ import jetbrains from '../../graphics/sponsors/jetbrains.png';
 import bugsee from '../../graphics/sponsors/logo_bugsee.png';
 import sketch from '../../graphics/sponsors/sketch logo.png';
 import skillenza from '../../graphics/sponsors/skillenza logo.png';
-import pses from '../../graphics/pses_logo.png'
+import pses from '../../graphics/pses_logo.png';
+import sm from '../../graphics/sticker-mule.svg';
 import {Grid,Row,Col} from 'react-bootstrap';
 export default class Sponsors extends Component{
     render(){
@@ -53,6 +54,14 @@ export default class Sponsors extends Component{
                         </div>
                     <p>Skillenza</p>
                     </div>
+
+                    <div className='sponsor-card'>
+                        <div className='tile'>
+                            <img src={sm}/>
+                        </div>
+                    <p>Sticker Mule</p>
+                    </div>
+
                 </div>
             </div>
             <h4>In collaboration with</h4>

@@ -31,14 +31,15 @@ export default class Register extends Component{
             bill: 0,
             payment_status : 'no',
             id_trans: 0,
-            TimeStamp: ''
+            TimeStamp: '',
+            acc: false
         }
 
     }
 
 
     callback = function () {
-        console.log('Done!!!!');
+        console.log('Captcha loaded!');
       };
        
       // specifying verify callback function
@@ -154,7 +155,6 @@ export default class Register extends Component{
                     var req_body = this.state;
                     delete req_body.btn_text;
                     delete req_body.check_text;
-                    console.log(this.state)
                     fetch('https://ithregistration2019.herokuapp.com/register',{
                         method: 'post',
                         headers: {'Content-type':'application/json'},
@@ -162,7 +162,6 @@ export default class Register extends Component{
                     })
                     .then(response => response.json())
                     .then(data => {
-                        console.log(data)
                         if(data.Status === 'Success'){
                                 fetch('https://ithregistration2019.herokuapp.com/payment',{
                                     method: 'post',
@@ -198,6 +197,10 @@ export default class Register extends Component{
                 this.setState({check_text: 'University',university:'',regno:'',combo:'TLH',bill: 499})
             }
         })
+    }
+
+    onAccCheck = () => {
+        this.setState({acc: !this.state.acc})
     }
 
     ieeeCheck = () => {
@@ -285,6 +288,12 @@ export default class Register extends Component{
                                     <FormControl id='x' onChange={this.onRegChange}  placeholder={this.state.check_text} type="text" />                
                                 </FormGroup>
 
+                                <FormGroup hidden={!this.state.external}>
+                                    <Checkbox onClick={this.onAccCheck} readOnly>
+                                    I require hostel accomodation (Additional charges will be applied)
+                                    </Checkbox>
+                                </FormGroup>
+
                                 <FormGroup hidden={this.state.external}>
                                     <ControlLabel>Select your combo</ControlLabel><br/>
                                     <Radio name="combo" inline onClick={this.chooseCombo1}>Techloop + Hack</Radio>{' '}
@@ -300,7 +309,7 @@ export default class Register extends Component{
 
                                 <FormGroup style={{"marginBottom": "0px"}}>
                                     <Checkbox checked={this.state.ieee_member} onClick={this.ieeeCheck} readOnly>
-                                    Check this box if you are an IEEE Member
+                                    I am an IEEE Member
                                     </Checkbox>
                                 </FormGroup>
 

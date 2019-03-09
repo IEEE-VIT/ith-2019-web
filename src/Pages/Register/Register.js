@@ -155,7 +155,7 @@ export default class Register extends Component{
                     var req_body = this.state;
                     delete req_body.btn_text;
                     delete req_body.check_text;
-                    fetch('http://localhost:5000/register',{
+                    fetch('https://ithregistration2019.herokuapp.com/register',{
                         method: 'post',
                         headers: {'Content-type':'application/json'},
                         body: JSON.stringify(req_body)
@@ -163,7 +163,7 @@ export default class Register extends Component{
                     .then(response => response.json())
                     .then(data => {
                         if(data.Status === 'Success'){
-                                fetch('http://localhost:5000/payment',{
+                                fetch('https://ithregistration2019.herokuapp.com/payment',{
                                     method: 'post',
                                     headers: {'Content-type':'application/json'},
                                     body: JSON.stringify(req_body)

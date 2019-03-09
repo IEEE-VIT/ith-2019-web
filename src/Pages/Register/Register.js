@@ -322,7 +322,9 @@ export default class Register extends Component{
                                 verifyCallback={this.verifyCallback}
                                 onloadCallback={this.callback}
                                 /><br/><br/>
-                                <p id='bill-status'>Registration Fees : <strong> Rs. {this.state.bill} </strong></p><br/>
+                                <p id='bill-status'>Registration Fees : <strong> Rs. {this.state.bill} </strong></p>
+                                <p style={{"color": "#fff"}}>(Inclusive of lunch, snacks and a midnight meal)</p><br/>
+
                                 <Button onClick={this.onRegister}>{this.state.btn_text}</Button>
                                 <p
                                     style={{

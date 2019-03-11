@@ -251,8 +251,9 @@ export default class Register extends Component{
             <div id='register'>
             <div id='reg-header'>
                 {/* <img src={logo}></img> */}
-                <h3>Register for IEEE Techloop Hack, 2019</h3><br/><br/><br/>
-                <h5>Enter your details</h5>
+                <h3>Register for IEEE Techloop Hack, 2019</h3>
+                <h5>(Team size : 3-5 members)</h5><br/><br/><br/>
+                
             </div>
             <Grid id='form-layout'>
                 <Row>

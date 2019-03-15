@@ -110,10 +110,6 @@ export default class Register extends Component{
         this.setState({track: 'IoT'})
     }
 
-    chooseUI = () => {
-        this.setState({track: 'UIUX'})
-    }
-
     chooseCombo1 = () => {
         this.setState({ieee_member: false,combo: 'TLH',track: '', bill: 499})
     }
@@ -304,8 +300,7 @@ export default class Register extends Component{
                                 <FormGroup hidden={this.state.combo === 'H' || this.state.combo === ''}>
                                     <ControlLabel>Select your Techloop track</ControlLabel><br/>
                                     <Radio name="track" inline onClick={this.chooseML}>ML</Radio>{' '}
-                                    <Radio name="track" inline onClick={this.chooseIoT}>IoT</Radio>{' '}
-                                    <Radio name="track" inline onClick={this.chooseUI}>UI/UX</Radio>
+                                    <Radio name="track" inline onClick={this.chooseIoT}>IoT</Radio>
                                 </FormGroup>
 
                                 <FormGroup style={{"marginBottom": "0px"}}>

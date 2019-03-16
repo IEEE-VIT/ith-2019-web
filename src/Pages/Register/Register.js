@@ -247,11 +247,11 @@ export default class Register extends Component{
             <div id='register'>
             <div id='reg-header'>
                 {/* <img src={logo}></img> */}
-                <h3>Register for IEEE Techloop Hack, 2019</h3>
-                <h5>(Team size : 3-5 members)</h5><br/><br/><br/>
+                <h3>Registrations have closed!</h3>
+                <h5>See you soon!</h5><br/><br/><br/>
                 
             </div>
-            <Grid id='form-layout'>
+            {/* <Grid id='form-layout'>
                 <Row>
                     <Col>
                         <div id='form-holder'>
@@ -333,7 +333,7 @@ export default class Register extends Component{
                         </div>
                     </Col>
                 </Row>
-            </Grid>
+            </Grid> */}
             </div>
         );
     }

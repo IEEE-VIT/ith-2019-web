@@ -46,7 +46,7 @@ export default class Navigation extends Component{
                     <Nav pullRight>
                         <NavItem href='#about'>ABOUT</NavItem>
                         <NavItem href='#highlights'>HIGHLIGHTS</NavItem>
-                        <NavItem href='https://drive.google.com/file/d/1tm6SQHY7v8cNkgLAnQC86CdgBrh0OD9S/view'>PROBLEM STATEMENTS</NavItem>
+                        <NavItem href='https://drive.google.com/file/d/1b6USZ1LcLkBAhtKkgFNM3zoEa7pwZths/view?usp=sharing'>PROBLEM STATEMENTS</NavItem>
                         <NavItem href='https://drive.google.com/file/d/1woX2dTw-aPrfV6_beNt6QqtCGdVqv-6E/view?usp=sharing' target='_top'>BROCHURE</NavItem>
                         {/* <NavItem>SPEAKERS</NavItem> */}
                         <NavItem href='#sponsors'>SPONSORS</NavItem>

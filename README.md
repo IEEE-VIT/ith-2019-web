@@ -1,2 +1,1 @@
-# itc2019_website
-Website for ITC 2019
+This is the code for the website built for IEEE Techloop hack, 2019
